@@ -9,23 +9,27 @@ public class EnsJoueurs {
 	
 
 	
-	private Joueur[] joueurs;
+	private static Joueur[] joueurs = creer();
+	
 	
 	
 	public EnsJoueurs() {
-		creer();
+		
 	}
 	
-	public void creer() {
+	private static Joueur[] creer() {
 		
 		
-		joueurs = new Joueur[20];
+		Joueur [] joueurs = new Joueur[20];
 		
-		for(int i = 0; i < joueurs.length; i++)
-			joueurs[i] = new Joueur(Integer.toString(i + 41));
+		for(int i = 0; i < joueurs.length; i++) 
+			joueurs[i] = new Joueur(Character.toString((char) (i + 65)));
+		
+		
+		return joueurs;
 	}
 	
-	public MyPanel afficher() {
+	public static MyPanel afficher() {
 		MyPanel container = new MyPanel();
 		
 		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
@@ -47,7 +51,7 @@ public class EnsJoueurs {
 		
 	}
 	
-	public Joueur selectionnerJoueur() {
+	public static Joueur selectionnerJoueur() {
 		
 		return joueurs[(int)(Math.random() * (joueurs.length))];
 		

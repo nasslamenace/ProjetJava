@@ -7,7 +7,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-public class VF {
+public class VF extends TypeQuestion{
 	
 	private String question;
 	private boolean isTrue;

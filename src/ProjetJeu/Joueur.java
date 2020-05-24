@@ -35,9 +35,18 @@ public class Joueur {
 		return container;
 	}
 	
-	public void MAJScore() {
-		
+	
+	public void MAJScore(TypePhase p) {
+		switch(p) {
+		case phase1:
+			score += 2;
+		case phase2:
+			score += 3;
+		case phase3:
+			score += 5;
+		}
 	}
+	
 	
 	
 	

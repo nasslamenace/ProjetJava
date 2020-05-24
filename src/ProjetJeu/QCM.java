@@ -7,9 +7,8 @@ import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 
-public class QCM {
+public class QCM extends TypeQuestion{
 	
-	private String question;
 	private ArrayList<String> reponsesPossibles;
 	private String reponse;
 	

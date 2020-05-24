@@ -1,8 +1,20 @@
 package ProjetJeu;
 
-public interface TypeQuestion {
+public abstract class TypeQuestion {
 	
 	
-	MyPanel afficher();
+	protected String question;
+	
+	abstract MyPanel afficher();
+	
+	
+	
+	public String getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(String question) {
+		this.question = question;
+	}
 
 }

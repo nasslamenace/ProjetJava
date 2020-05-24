@@ -5,10 +5,10 @@ import java.awt.FlowLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 
-public class RC implements TypeQuestion {
+public class RC extends TypeQuestion {
 	
 	
-	private String question;
+	
 	private String bonneReponse;
 	
 	JTextField reponseTf = new JTextField(10);
@@ -30,7 +30,7 @@ public class RC implements TypeQuestion {
 		
 		MyPanel champs = new MyPanel();
 		
-		champs.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		champs.setLayout(new FlowLayout(FlowLayout.CENTER));
 		champs.add(new MyLabel("Votre réponse : "));
 		champs.add(reponseTf);
 		
@@ -39,7 +39,6 @@ public class RC implements TypeQuestion {
 		return p;
 		
 	}
-	
 	
 	
 	

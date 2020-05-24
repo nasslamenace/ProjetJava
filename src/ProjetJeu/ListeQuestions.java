@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.swing.BoxLayout;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 
@@ -11,15 +13,15 @@ import javax.swing.JOptionPane;
 public class ListeQuestions {
 	
 	
-	private ArrayList<Question> questions;
+	public ArrayList<Question> questions;
 	
-	private String theme;
+	
 	
 	
 	public ListeQuestions(ArrayList<Question> question, String theme) {
 		
 		this.questions = question;
-		this.theme = theme;
+		
 		
 	}
 	
@@ -33,7 +35,26 @@ public class ListeQuestions {
 		}
 	}
 	
-	public void afficherListe() {
+	public MyPanel afficherListe() {
+		
+		MyPanel container = new MyPanel();
+		
+		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
+		
+		
+		container.add(new MyLabel("Liste des joueurs"));
+		
+		String[] liste = new String[20];
+		
+		for(int i = 0; i < questions.size(); i++)
+			liste[i] = questions.get(i).getEnonce().getQuestion();
+		
+		
+		
+		
+		container.add(new JList(liste));
+		
+		return container;
 		
 	}
 	
@@ -44,7 +65,7 @@ public class ListeQuestions {
 	public void supprimerQuestion(Question q) {
 		
 		if(this.questions.indexOf(q) == -1)
-			JOptionPane.showMessageDialog(null, "Cette quesiton n'existe pas et ne peut donc pas être supprimé! ", "error",
+			JOptionPane.showMessageDialog(null, "Cette question n'existe pas et ne peut donc pas être supprimé! ", "error",
 					JOptionPane.ERROR_MESSAGE);
 		else
 			this.questions.remove(this.questions.indexOf(q));
@@ -115,13 +136,7 @@ public class ListeQuestions {
 		this.questions = questions;
 	}
 
-	public String getTheme() {
-		return theme;
-	}
-
-	public void setTheme(String theme) {
-		this.theme = theme;
-	}
+	
 	
 	
 	

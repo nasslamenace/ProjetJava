@@ -9,22 +9,34 @@ import javax.swing.JOptionPane;
 public class Theme {
 	
 	
-	private ArrayList<String> themes = (ArrayList<String>) 
-			Arrays.asList("CultureGe", "Histoire", "Geographie", "Science", "Maths", 
-						  "Info", "Biologie", "Cinema", "Musique", "Pays");
+	public static ArrayList<String> themes = initialiserTheme();
+			
 	
-	private ArrayList<Integer> indicateurs = new ArrayList<Integer>();
+	private static ArrayList<Integer> indicateurs = new ArrayList<Integer>();
 	
-	private int currentTheme;
+	private static int currentTheme;
+	
+	private ListeQuestions mesQuestions;
 	
 	//private Iterator <String> indicateur;
 	
 	
-	public Theme() {
+	private static ArrayList<String> initialiserTheme(){
+		ArrayList<String> tab = new ArrayList<String>();
 		
+		tab.addAll(Arrays.asList("CultureGe", "Histoire", "Geographie", "Science", "Maths", 
+				  "Info", "Biologie", "Cinema", "Musique", "Pays"));
+		
+		return tab;
 	}
 	
-	public void modifierTheme(String previousTheme, String newTheme) {
+	
+	public Theme(String theme) {
+		setMesQuestions(new ListeQuestions(theme));
+	}
+	
+	
+	public static void modifierTheme(String previousTheme, String newTheme) {
 		if(themes.indexOf(previousTheme) == -1)
 			JOptionPane.showMessageDialog(null, "Ce theme n'existe pas, vous ne pouvez pas le modifier ! ", "error",
 					JOptionPane.ERROR_MESSAGE);
@@ -33,7 +45,7 @@ public class Theme {
 		}
 	}
 	
-	public int selectionerTheme(String theme) {
+	public static int selectionerTheme(String theme) {
 		
 		if(themes.indexOf(theme) == -1) {
 			JOptionPane.showMessageDialog(null, "Le theme " + theme + "n'existe pas, vous ne pouvez pas le modifier ! ", "error",
@@ -43,17 +55,28 @@ public class Theme {
 		}
 		else {
 
-			int temp = this.currentTheme;
-			this.currentTheme = themes.indexOf(theme);
+			int temp = currentTheme;
+			currentTheme = themes.indexOf(theme);
 			
 			indicateurs.add(temp);
 			
 			return temp;
 		}
-
 	}
 	
-	public ArrayList<String> selectionnerCinqThemes(){
+	public static int selectionerThemePhase1() {
+
+		int temp = currentTheme;
+		if(currentTheme >= 9)
+			currentTheme = 0;
+		else
+			currentTheme++;
+		return temp;
+	}
+	
+	
+	
+	public static ArrayList<String> selectionnerCinqThemes(){
 		
 		ArrayList<String> themesSelectionne = new ArrayList<String>();
 		ArrayList<Integer> indices = new ArrayList<Integer>();
@@ -66,13 +89,41 @@ public class Theme {
 			}while(indices.indexOf(indice) != -1);
 			
 			
-			themesSelectionne.add(this.themes.get(indice));
+			themesSelectionne.add(themes.get(indice));
 			indices.add(indice);
 			
 		}
 		
 		return themesSelectionne;
 		
+	}
+	
+	
+	
+	public static ArrayList<String> selectionnerSixThemes(){
+		
+		ArrayList<String> themesSelectionne = new ArrayList<String>();
+		ArrayList<Integer> indices = new ArrayList<Integer>();
+		int indice;
+		
+		for(int i = 0; i < 6; i++) {
+			
+			do {
+				 indice = (int)(Math.random() * (10));
+			}while(indices.indexOf(indice) != -1);
+			
+			
+			themesSelectionne.add(themes.get(indice));
+			indices.add(indice);
+			
+		}
+		
+		return themesSelectionne;
+		
+	}
+	
+	public static void clearIndice() {
+		indicateurs.clear();
 	}
 	
 	
@@ -101,6 +152,16 @@ public class Theme {
 
 	public void setCurrentTheme(int currentTheme) {
 		this.currentTheme = currentTheme;
+	}
+
+
+	public ListeQuestions getMesQuestions() {
+		return mesQuestions;
+	}
+
+
+	public void setMesQuestions(ListeQuestions mesQuestions) {
+		this.mesQuestions = mesQuestions;
 	}
 
 }
