@@ -13,7 +13,6 @@ public class MyPanel extends JPanel {
 		this.setOpaque(true);
 		this.setBackground(new Color(61, 97, 166));
 		
-		
 	}
 
 

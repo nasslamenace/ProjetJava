@@ -39,6 +39,10 @@ public class RC {
 		return p;
 		
 	}
+	
+	
+	
+	
 
 	public String getQuestion() {
 		return question;
