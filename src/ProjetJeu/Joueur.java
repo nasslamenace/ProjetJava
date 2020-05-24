@@ -6,16 +6,18 @@ public class Joueur {
 	
 	public static int nbJoueurs = 100;
 	
+	private String nom;
 	private int numero;
 	private int score;
 	private Etat etat;
 	
 	
-	public Joueur() {	
+	public Joueur(String nom) {	
 		numero = nbJoueurs;
 		score = 0;
 		etat = Etat.enAttente;
 		nbJoueurs += 10;
+		this.setNom(nom);
 	}
 	
 	
@@ -57,6 +59,16 @@ public class Joueur {
 	}
 	public void changerEtat(Etat etat) {
 		this.etat = etat;
+	}
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	
 	

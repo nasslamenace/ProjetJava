@@ -5,7 +5,7 @@ import java.awt.FlowLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 
-public class RC {
+public class RC implements TypeQuestion {
 	
 	
 	private String question;
