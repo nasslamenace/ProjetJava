@@ -59,4 +59,16 @@ public class RC extends TypeQuestion {
 		this.bonneReponse = bonneReponse;
 	}
 
+	@Override
+	public String getSaisie() {
+		return reponseTf.getText();
+	}
+
+	@Override
+	public boolean isRight() {
+		String temp = reponseTf.getText();
+		reponseTf.setText("");
+		return temp.equals(this.bonneReponse);
+	}
+
 }

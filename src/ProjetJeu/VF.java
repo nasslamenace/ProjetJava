@@ -79,4 +79,24 @@ public class VF extends TypeQuestion{
 		this.isTrue = isTrue;
 	}
 
+	
+
+	@Override
+	public String getSaisie() {
+		
+		return trueBtn.isSelected() ? trueBtn.getText() : falseBtn.getText();
+	}
+
+
+	@Override
+	public boolean isRight() {
+		
+		if(trueBtn.isSelected() && this.isTrue)
+			return true;
+		else if(falseBtn.isSelected() && !this.isTrue)
+			return true;
+		
+		return false;
+	}
+
 }

@@ -73,7 +73,7 @@ public class QCM extends TypeQuestion{
 	
 	
 	
-
+	
 	public String getQuestion() {
 		return question;
 	}
@@ -96,6 +96,27 @@ public class QCM extends TypeQuestion{
 
 	public void setReponse(String reponse) {
 		this.reponse = reponse;
+	}
+
+
+	@Override
+	public String getSaisie() {
+		
+		for(int i = 0; i < reponsesPossiblesRb.size(); i++)
+			if(reponsesPossiblesRb.get(i).isSelected())
+				return reponsesPossiblesRb.get(i).getText();
+		return null;
+	}
+
+
+	@Override
+	public boolean isRight() {
+		for(int i = 0; i < this.reponsesPossiblesRb.size(); i++) {
+			if(this.reponsesPossiblesRb.get(i).isSelected() && this.reponsesPossiblesRb.get(i).getText().equals(reponse))
+				return true;
+		}
+		
+		return false;
 	}
 
 }

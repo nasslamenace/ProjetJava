@@ -31,8 +31,9 @@ public class ListeQuestions {
 		for(int i = 0; i < 15; i++) {
 			int nb1 = (int)(Math.random() * (10));
 			int nb2 = (int)(Math.random() * (10));
-			mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new RC(nb1 +  "*" + nb2, "12")));
+			mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new RC(nb1 +  "*" + nb2, Integer.toString(nb1*nb2))));
 		}
+		this.questions = mesQuestions;
 	}
 	
 	public MyPanel afficherListe() {
@@ -74,6 +75,22 @@ public class ListeQuestions {
 	}
 	
 	public Question selectionnerQuestion(Niveau n) {
+		
+		
+		/*
+		//Stream<Question> questionStream = this.questions.stream();
+		System.out.println(this.questions.size());
+		try {
+		
+			return this.questions.get(0);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return new Question(Niveau.facile, Theme.themes.get(Theme.selectionerThemePhase1()), new RC("2 + 2", "4"));
+		}
+		
+		*/
+		
 		
 		Stream<Question> questionStream = this.questions.stream();
 		
