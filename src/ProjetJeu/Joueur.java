@@ -4,7 +4,7 @@ import javax.swing.BoxLayout;
 
 public class Joueur {
 	
-	public static int nbJoueurs = 100;
+	public static int numJoueurs = 100;
 	
 	private String nom;
 	private int numero;
@@ -13,10 +13,10 @@ public class Joueur {
 	
 	
 	public Joueur(String nom) {	
-		numero = nbJoueurs;
+		numero = numJoueurs;
 		score = 0;
 		etat = Etat.enAttente;
-		nbJoueurs += 10;
+		numJoueurs += 10;
 		this.setNom(nom);
 	}
 	
@@ -40,10 +40,13 @@ public class Joueur {
 		switch(p) {
 		case phase1:
 			score += 2;
+			break;
 		case phase2:
 			score += 3;
+			break;
 		case phase3:
 			score += 5;
+			break;
 		}
 	}
 	

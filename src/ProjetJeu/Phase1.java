@@ -69,7 +69,7 @@ public class Phase1 extends MyPanel implements Phase {
 				
 				if(q.getEnonce().isRight())
 					joueurs.get(compteurJoueur).MAJScore(TypePhase.phase1);
-
+				
 				
 				
 				
@@ -83,7 +83,7 @@ public class Phase1 extends MyPanel implements Phase {
 				
 				
 				q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
-				System.out.println(q.getEnonce().getQuestion());
+				//System.out.println(q.getEnonce().getQuestion());
 				questionPan = q.afficher();
 				
 				add(questionPan, BorderLayout.CENTER);
@@ -97,6 +97,8 @@ public class Phase1 extends MyPanel implements Phase {
 					System.out.println("Fin de la phase 1");
 					for(int i = 0; i < joueurs.size(); i++)
 						System.out.println(joueurs.get(i).getScore());
+					
+					
 					}
 				
 				compteurJoueur++;

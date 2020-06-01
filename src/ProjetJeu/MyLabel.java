@@ -1,6 +1,8 @@
 package ProjetJeu;
 
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -13,6 +15,7 @@ public class MyLabel extends JLabel {
 		this.setForeground(Color.white);
 		this.setFont(new Font( "ChalkBoard", Font.PLAIN, 15));
 		setAlignmentX(this.CENTER_ALIGNMENT);
+		setHorizontalAlignment(SwingConstants.CENTER);
 		
 	}
 	

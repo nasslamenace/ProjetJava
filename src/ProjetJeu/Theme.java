@@ -1,9 +1,11 @@
 package ProjetJeu;
 
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 public class Theme {
@@ -19,6 +21,7 @@ public class Theme {
 	private ListeQuestions mesQuestions;
 	
 	//private Iterator <String> indicateur;
+	
 	
 	
 	private static ArrayList<String> initialiserTheme(){
@@ -119,6 +122,29 @@ public class Theme {
 		}
 		
 		return themesSelectionne;
+		
+	}
+	
+	public static MyPanel afficher() {
+		
+		MyPanel container = new MyPanel();
+		
+		container.setLayout(new BorderLayout());
+		
+		container.add(new MyLabel("Voici les themes :"), BorderLayout.NORTH);
+		
+		
+		String[] liste = new String[10];
+		
+		for(int i = 0; i < liste.length; i++)
+			liste[i] = themes.get(i);
+
+		
+		container.add(new JList(liste), BorderLayout.CENTER); 
+		
+		container.add(new MyLabel("Le theme actuel est le theme :" + themes.get(currentTheme)), BorderLayout.SOUTH);
+		
+		return container;
 		
 	}
 	

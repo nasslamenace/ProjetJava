@@ -21,8 +21,6 @@ public class ListeQuestions {
 	public ListeQuestions(ArrayList<Question> question, String theme) {
 		
 		this.questions = question;
-		
-		
 	}
 	
 	public ListeQuestions(String theme) {
