@@ -89,7 +89,7 @@ public class Phase1 extends MyPanel implements Phase {
 					//questionPan.removeAll();
 					
 					remove(questionPan);
-					
+					 
 					
 					
 					q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
