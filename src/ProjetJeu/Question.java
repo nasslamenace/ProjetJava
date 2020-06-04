@@ -1,8 +1,10 @@
 package ProjetJeu;
 
+import java.io.Serializable;
+
 import javax.swing.BoxLayout;
 
-public class Question<T extends TypeQuestion> {
+public class Question<T extends TypeQuestion> implements Serializable {
 	
 	
 	private Niveau niveau;

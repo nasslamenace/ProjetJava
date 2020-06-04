@@ -2,9 +2,13 @@ package ProjetJeu;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -85,7 +89,7 @@ public class Main extends JFrame{
 		
 		this.setContentPane(wholeContainer);
 		
-		this.setSize(400,280);
+		this.setSize(500,470);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
@@ -150,12 +154,19 @@ public class Main extends JFrame{
 		themesPan.setLayout(new BoxLayout(themesPan, BoxLayout.PAGE_AXIS));
 		themesPan.add(Theme.afficher());
 		
+		MyPanel playersPan = new MyPanel();
+		
+		playersPan.setLayout(new BoxLayout(playersPan, BoxLayout.PAGE_AXIS));
+		playersPan.add(EnsJoueurs.afficher());
 		
 		MyPanel addQuestionPan = new MyPanel();
 		
 		addQuestionPan.setLayout(new BoxLayout(addQuestionPan, BoxLayout.PAGE_AXIS));
 		addQuestionPan.add(cancelContainer);
 		addQuestionPan.add(questionTypeBox);
+		
+		trueBtn.setForeground(Color.white);
+		falseBtn.setForeground(Color.white);
 		
 		choixBg.add(trueBtn);
 		choixBg.add(falseBtn);
@@ -198,8 +209,9 @@ public class Main extends JFrame{
 		
 		mainContainer.add(menuPan, "Menu");
 		mainContainer.add(themesPan, "Theme");
+		mainContainer.add(playersPan, "Players");
 		mainContainer.add(addQuestionPan, "AddQuestion");
-		
+		mainContainer.add(new Phase1(), "Jeu");
 		
 		wholeContainer.setLayout(new BorderLayout());
 		
@@ -238,7 +250,7 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-	
+			
 			wholeContainer.add(cancelContainer, BorderLayout.NORTH);
 			revalidate();
 			repaint();
@@ -256,7 +268,18 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-	
+	        try
+	        {
+	            FileOutputStream fos = new FileOutputStream("employeeData");
+	            ObjectOutputStream oos = new ObjectOutputStream(fos);
+	            //oos.writeObject(employees);
+	            oos.close();
+	            fos.close();
+	        } 
+	        catch (IOException ioe) 
+	        {
+	            ioe.printStackTrace();
+	        }
 			
 			
 		}
@@ -270,7 +293,8 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-	
+			
+			mainLayout.show(mainContainer, "Players");
 			wholeContainer.add(cancelContainer, BorderLayout.NORTH);
 			revalidate();
 			repaint();
@@ -286,7 +310,7 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-	
+			mainLayout.show(mainContainer, "Jeu");
 			wholeContainer.add(cancelContainer, BorderLayout.NORTH);
 			revalidate();
 			repaint();
