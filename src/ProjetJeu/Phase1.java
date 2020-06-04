@@ -61,62 +61,62 @@ public class Phase1 extends MyPanel implements Phase {
 		//Question q = new Question(Niveau.facile, Theme.themes.get(Theme.selectionerThemePhase1()), new RC("2 + 2", "4"));
 		q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
 		
-		
-		confirmBtn.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				if(q.getEnonce().isRight())
-					joueurs.get(compteurJoueur).MAJScore(TypePhase.phase1);
-				
-				
-				
-				
-				
-				annonceLbl.setText("C'est au joueurs " + joueurs.get(compteurJoueur).getNom() + " de jouer");
-				
-				//questionPan.removeAll();
-				
-				remove(questionPan);
-				
-				
-				
-				q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
-				//System.out.println(q.getEnonce().getQuestion());
-				questionPan = q.afficher();
-				
-				add(questionPan, BorderLayout.CENTER);
-				questionPan.revalidate();
-				questionPan.repaint();
-				
-				revalidate();
-				repaint();
-				
-				if(compteurJoueur >= 3) {
-					System.out.println("Fin de la phase 1");
-					for(int i = 0; i < joueurs.size(); i++)
-						System.out.println(joueurs.get(i).getScore());
+		if(q != null) {
+			
+			confirmBtn.addActionListener(new ActionListener() {
+	
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+					if(q.getEnonce().isRight())
+						joueurs.get(compteurJoueur).MAJScore(TypePhase.phase1);
 					
 					
-					}
+					
+					
+					
+					annonceLbl.setText("C'est au joueurs " + joueurs.get(compteurJoueur).getNom() + " de jouer");
+					
+					//questionPan.removeAll();
+					
+					remove(questionPan);
+					
+					
+					
+					q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
+					//System.out.println(q.getEnonce().getQuestion());
+					questionPan = q.afficher();
+					
+					add(questionPan, BorderLayout.CENTER);
+					questionPan.revalidate();
+					questionPan.repaint();
+					
+					revalidate();
+					repaint();
+					
+					if(compteurJoueur >= 3) {
+						System.out.println("Fin de la phase 1");
+						for(int i = 0; i < joueurs.size(); i++)
+							System.out.println(joueurs.get(i).getScore());
+						
+						
+						}
+					
+					compteurJoueur++;
+					
+				}
 				
-				compteurJoueur++;
 				
-			}
+				
+			});
 			
+			questionPan = q.afficher();
 			
-			
-		});
-		
-		questionPan = q.afficher();
-		
-		this.add(questionPan, BorderLayout.CENTER);
-		this.add(confirmBtn, BorderLayout.SOUTH);
-		
-
+			this.add(questionPan, BorderLayout.CENTER);
+			this.add(confirmBtn, BorderLayout.SOUTH);
 			
 
+		}
 		
 		
 		
