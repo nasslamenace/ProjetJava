@@ -28,7 +28,7 @@ public class EnsJoueurs {
 		
 		return joueurs;
 	}
-	
+	 
 	public static MyPanel afficher() {
 		MyPanel container = new MyPanel();
 		

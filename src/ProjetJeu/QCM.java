@@ -111,6 +111,9 @@ public class QCM extends TypeQuestion{
 
 	@Override
 	public boolean isRight() {
+		
+		//System.out.println(reponse + "nn");
+		
 		for(int i = 0; i < this.reponsesPossiblesRb.size(); i++) {
 			if(this.reponsesPossiblesRb.get(i).isSelected() && this.reponsesPossiblesRb.get(i).getText().equals(reponse))
 				return true;

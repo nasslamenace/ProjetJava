@@ -24,16 +24,16 @@ public class ListeQuestions {
 	}
 	
 	public ListeQuestions(String theme) {
-		ArrayList<Question> mesQuestions = new ArrayList<Question>();
+		/*ArrayList<Question> mesQuestions = new ArrayList<Question>();
 		
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 15; i++) {
 			int nb1 = (int)(Math.random() * (10));
 			int nb2 = (int)(Math.random() * (10));
 			mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new RC(nb1 +  "*" + nb2, Integer.toString(nb1*nb2))));
 		}
-		mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new VF("Le chat est un mammifère", true)));
+		this.questions = mesQuestions;*/
 		
-		this.questions = mesQuestions;
+		this.questions = FileManager.retrieveQuestions(theme);
 	}
 	
 	public MyPanel afficherListe() {
@@ -104,7 +104,7 @@ public class ListeQuestions {
 									.collect(Collectors.toList());
 			
 			if(i.size() < 1) {
-				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau facile ", "error",
+				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau facile, veuillez en ajouter ! ", "error",
 						JOptionPane.ERROR_MESSAGE);
 				return null;
 				}

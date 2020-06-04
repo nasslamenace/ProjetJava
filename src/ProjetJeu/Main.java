@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -17,10 +19,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 
 
 
@@ -39,7 +44,9 @@ public class Main extends JFrame{
 	
 	//ADD QUESTION COMPONENT
 	private JComboBox<String> questionTypeBox = new JComboBox<String>();
-	private JTextField enonceTf = new JTextField();
+	private JComboBox<String> themesBox = new JComboBox<String>();
+	private JComboBox<String> niveauBox = new JComboBox<String>();
+	private JTextArea enonceTf = new JTextArea();
 	
 	ButtonGroup choixBg = new ButtonGroup();
 	JRadioButton trueBtn = new JRadioButton("Vrai", true);
@@ -57,11 +64,16 @@ public class Main extends JFrame{
 	private JComboBox<String> reponsesBox = new JComboBox<String>();
 	
 	
+	
 	private MyLabel reponseLbl = new MyLabel("Votre réponse : ");
 	private JTextField reponseTf = new JTextField(10);
 	
 	
 	private MyButton addBtn = new MyButton("Ajouter");
+	
+	//Phase de jeu
+	
+	private Phase1 phase1 = new Phase1();
 	
 	
 	
@@ -147,6 +159,10 @@ public class Main extends JFrame{
 		menuContainer.add(new MyLabel("Bienvenue au jeu des question :"), BorderLayout.NORTH);
 		menuContainer.add(new JScrollPane(menuPan), BorderLayout.CENTER);
 		
+		Border blackline = BorderFactory.createLineBorder(Color.black);
+		  
+		enonceTf.setBorder(blackline);
+		  
 		
 		
 		MyPanel themesPan = new MyPanel();
@@ -163,6 +179,7 @@ public class Main extends JFrame{
 		
 		addQuestionPan.setLayout(new BoxLayout(addQuestionPan, BoxLayout.PAGE_AXIS));
 		addQuestionPan.add(cancelContainer);
+		addQuestionPan.add(new MyLabel("Choisir le theme : "));
 		addQuestionPan.add(questionTypeBox);
 		
 		trueBtn.setForeground(Color.white);
@@ -171,10 +188,16 @@ public class Main extends JFrame{
 		choixBg.add(trueBtn);
 		choixBg.add(falseBtn);
 		
+		for(int i = 0; i < Theme.themes.size(); i++)
+			themesBox.addItem(Theme.themes.get(i));
 		
 		questionTypeBox.addItem("QCM");
 	    questionTypeBox.addItem("Vrai/Faux");
    	    questionTypeBox.addItem("Réponse courte");
+   	    
+   	    niveauBox.addItem(Niveau.facile.toString());
+   	    niveauBox.addItem(Niveau.moyen.toString());
+   	    niveauBox.addItem(Niveau.difficile.toString());
    	    
    	    reponsesBox.addItem("reponse 1");
    	    reponsesBox.addItem("reponse 2");
@@ -183,9 +206,13 @@ public class Main extends JFrame{
    	    questionContainer.setLayout(new BoxLayout(questionContainer, BoxLayout.Y_AXIS));
    	    
    	    
-   	    
+   	    questionContainer.add(new MyLabel("Choisir le theme : "));
+   	    questionContainer.add(themesBox);
+   	    questionContainer.add(new MyLabel("Choisir le niveau de difficulté : "));
+   	    questionContainer.add(niveauBox);
    	    questionContainer.add(new MyLabel("Entrez l'énoncé de la question : "));
    	    questionContainer.add(enonceTf);
+   	    
 
 
    	    
@@ -203,7 +230,8 @@ public class Main extends JFrame{
    	    
    		questionTypeBox.addActionListener(new QuestionTypeListener());
    		
-   		addQuestionPan.add(questionContainer);
+   		
+   		addQuestionPan.add(new JScrollPane(questionContainer));
    		
    		addBtn.addActionListener(new AddNewQuestionListener());
 		
@@ -211,7 +239,7 @@ public class Main extends JFrame{
 		mainContainer.add(themesPan, "Theme");
 		mainContainer.add(playersPan, "Players");
 		mainContainer.add(addQuestionPan, "AddQuestion");
-		mainContainer.add(new Phase1(), "Jeu");
+		mainContainer.add(phase1, "Jeu");
 		
 		wholeContainer.setLayout(new BorderLayout());
 		
@@ -268,18 +296,56 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-	        try
-	        {
-	            FileOutputStream fos = new FileOutputStream("employeeData");
-	            ObjectOutputStream oos = new ObjectOutputStream(fos);
-	            //oos.writeObject(employees);
-	            oos.close();
-	            fos.close();
-	        } 
-	        catch (IOException ioe) 
-	        {
-	            ioe.printStackTrace();
-	        }
+			switch((String)questionTypeBox.getSelectedItem()) {
+				case "QCM":
+					if(enonceTf.getText().isEmpty() || reponse1Tf.getText().isEmpty() || reponse2Tf.getText().isEmpty() || reponse3Tf.getText().isEmpty())
+						JOptionPane.showMessageDialog(null, "Veuillez remplir tout les champs !", "error",
+								JOptionPane.ERROR_MESSAGE);
+					else {
+						ArrayList<Question> questions = FileManager.retrieveQuestions((String)themesBox.getSelectedItem());
+						
+						ArrayList<String> choix = new ArrayList<String>();
+						
+						choix.add(reponse1Tf.getText());
+						choix.add(reponse2Tf.getText());
+						choix.add(reponse3Tf.getText());
+						
+						Question q = null;
+						switch((String)niveauBox.getSelectedItem()){
+							case "facile":
+								
+								switch((String)reponsesBox.getSelectedItem()) {
+								case "reponse 1":
+									q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+									break;
+								case "reponse 2":
+									q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+									break;
+								case "reponse 3":
+									q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+									break;
+								}
+								
+								
+								break;
+							case "moyen":
+								q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponseTf.getText()));
+								break;
+							case "difficile":
+								q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponseTf.getText()));
+								break;
+						}
+						
+						questions.add(q);
+						
+						FileManager.updateQuestion(questions, (String)themesBox.getSelectedItem());
+					}
+					break;
+				case "Vrai/Faux":
+					break;
+				case "Réponse courte":
+					break;
+			}
 			
 			
 		}
@@ -310,8 +376,12 @@ public class Main extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			phase1.selectionnerJoueurs();
+			phase1.phaseDeJeu();
+			
 			mainLayout.show(mainContainer, "Jeu");
 			wholeContainer.add(cancelContainer, BorderLayout.NORTH);
+			
 			revalidate();
 			repaint();
 		}

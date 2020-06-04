@@ -13,7 +13,7 @@ public class VF extends TypeQuestion{
 	private boolean isTrue;
 	
 	
-
+	ButtonGroup choixBg = new ButtonGroup();
 	JRadioButton trueBtn = new JRadioButton("Vrai", true);
 	JRadioButton falseBtn = new JRadioButton("Faux", false);
 	

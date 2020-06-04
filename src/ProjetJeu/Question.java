@@ -32,6 +32,11 @@ public class Question<T extends TypeQuestion> implements Serializable {
 		
 		
 	}
+	
+    @Override
+    public String toString() {
+        return "MA QUESTION";
+    }
 
 	public Niveau getNiveau() {
 		return niveau;

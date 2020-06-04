@@ -1,6 +1,8 @@
 package ProjetJeu;
 
-public abstract class TypeQuestion {
+import java.io.Serializable;
+
+public abstract class TypeQuestion implements Serializable{
 	
 	
 	protected String question;
