@@ -104,7 +104,7 @@ public class ListeQuestions {
 									.collect(Collectors.toList());
 			
 			if(i.size() < 1) {
-				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau facile ", "error",
+				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau facile, veuillez en ajouter ! ", "error",
 						JOptionPane.ERROR_MESSAGE);
 				return null;
 				}

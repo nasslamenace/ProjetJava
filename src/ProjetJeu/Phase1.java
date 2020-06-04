@@ -1,6 +1,7 @@
 package ProjetJeu;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -27,8 +28,8 @@ public class Phase1 extends MyPanel implements Phase {
 	public Phase1() {
 		joueurs = new ArrayList<Joueur>();
 		compteurJoueur = 0;
-		selectionnerJoueurs();
-		phaseDeJeu();
+		//selectionnerJoueurs();
+		//phaseDeJeu();
 		
 	}
 	
@@ -43,6 +44,12 @@ public class Phase1 extends MyPanel implements Phase {
 		}while(joueurs.size() < 4);
 		
 	}
+	
+	public void annuler() {
+		joueurs.clear();
+		compteurJoueur = 0;
+		
+	}
 
 	@Override
 	public void phaseDeJeu() {
@@ -51,8 +58,7 @@ public class Phase1 extends MyPanel implements Phase {
 		
 		this.setLayout(new BorderLayout());
 		
-		annonceLbl.setText("C'est au joueurs " + joueurs.get(compteurJoueur).getNom() + " de jouer");
-		annonceLbl.setHorizontalAlignment(SwingConstants.CENTER);
+
 		
 		this.add(annonceLbl, BorderLayout.NORTH);
 		
@@ -62,6 +68,9 @@ public class Phase1 extends MyPanel implements Phase {
 		q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
 		
 		if(q != null) {
+			
+			annonceLbl.setText("C'est au joueurs " + joueurs.get(compteurJoueur).getNom() + " de jouer");
+			annonceLbl.setHorizontalAlignment(SwingConstants.CENTER);
 			
 			confirmBtn.addActionListener(new ActionListener() {
 	
@@ -80,7 +89,7 @@ public class Phase1 extends MyPanel implements Phase {
 					//questionPan.removeAll();
 					
 					remove(questionPan);
-					
+					 
 					
 					
 					q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
@@ -116,6 +125,13 @@ public class Phase1 extends MyPanel implements Phase {
 			this.add(confirmBtn, BorderLayout.SOUTH);
 			
 
+		}
+		else {
+			annonceLbl.setOpaque(true);
+			annonceLbl.setText("Veuillez ajouter des questions afin de pouvoir jouer");
+			annonceLbl.setHorizontalAlignment(SwingConstants.CENTER);
+			annonceLbl.setForeground(Color.red);
+			annonceLbl.setBackground(Color.white);
 		}
 		
 		

@@ -27,20 +27,20 @@ public class FileManager {
         	System.out.println("il n'y a pas encore de liste de questions enregistré pour le theme : " + theme);
         	return questionList;
         }
-        catch (IOException ioe) 
+        catch (IOException ioe)    
         {
             ioe.printStackTrace();
             return null;
         } 
         catch (ClassNotFoundException c) 
         {
-            System.out.println("La classe n'est pas trouvée");
+            System.out.println("La classe n'est pas trouvée !");
             c.printStackTrace();
             return null;
         }
         
         return questionList;
-        
+         
 	}
 	
 	public static void updateQuestion(ArrayList<Question> questionList, String theme) {
