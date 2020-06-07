@@ -13,7 +13,8 @@ import javax.swing.JOptionPane;
 public class ListeQuestions {
 	
 	
-	public ArrayList<Question> questions;
+	private ArrayList<Question> questions;
+	private String theme;
 	
 	
 	
@@ -21,19 +22,25 @@ public class ListeQuestions {
 	public ListeQuestions(ArrayList<Question> question, String theme) {
 		
 		this.questions = question;
+		this.theme = theme;
 	}
 	
 	public ListeQuestions(String theme) {
+		
 		/*ArrayList<Question> mesQuestions = new ArrayList<Question>();
 		
-		for(int i = 0; i < 15; i++) {
+		for(int i = 0; i < 2; i++) {
 			int nb1 = (int)(Math.random() * (10));
 			int nb2 = (int)(Math.random() * (10));
 			mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new RC(nb1 +  "*" + nb2, Integer.toString(nb1*nb2))));
 		}
+		
+		mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new VF("est ce que le chien aboie ? ", true)));
+		mesQuestions.add(new Question(Niveau.facile, theme, (TypeQuestion) new VF("est ce que le chat miaule ? ", true)));
 		this.questions = mesQuestions;*/
 		
 		this.questions = FileManager.retrieveQuestions(theme);
+		this.theme = theme;
 	}
 	
 	public MyPanel afficherListe() {
@@ -43,7 +50,30 @@ public class ListeQuestions {
 		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
 		
 		
-		container.add(new MyLabel("Liste des joueurs"));
+		container.add(new MyLabel("Liste des Question pour le theme" + theme + " :"));
+		
+		String[] liste = new String[20];
+		
+		for(int i = 0; i < questions.size(); i++)
+			liste[i] = questions.get(i).getEnonce().getQuestion();
+		
+		
+		
+		
+		container.add(new JList(liste));
+		
+		return container;
+		
+	}
+	
+	public MyPanel afficherListe(Niveau n) {
+		
+		MyPanel container = new MyPanel();
+		
+		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
+		
+		
+		container.add(new MyLabel("Liste des Question pour le theme" + theme + " :"));
 		
 		String[] liste = new String[20];
 		
@@ -95,53 +125,21 @@ public class ListeQuestions {
 		Stream<Question> questionStream = this.questions.stream();
 		
 		
-		
-		
-		
-		switch(n) {
-		case facile:
-			ArrayList<Question> i = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == Niveau.facile)
-									.collect(Collectors.toList());
-			
-			if(i.size() < 1) {
-				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau facile, veuillez en ajouter ! ", "error",
-						JOptionPane.ERROR_MESSAGE);
-				return null;
-				}
-			else
-				return i.get((int)(Math.random() * (i.size())));
-			
-			
-		case moyen:
-			ArrayList<Question> j = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == Niveau.moyen)
-			.collect(Collectors.toList());
+		ArrayList<Question> i = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == Niveau.facile)
+				.collect(Collectors.toList());
 
-			if(j.size() < 1) {
-					JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau moyen", "error",
-							JOptionPane.ERROR_MESSAGE);
-					return null;
-			}
-			else
-				return j.get((int)(Math.random() * (j.size())));
-			
-		case difficile:
-			ArrayList<Question> k = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == Niveau.moyen)
-			.collect(Collectors.toList());
-
-			if(k.size() < 1) {
-				JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau moyen", "error",
-							JOptionPane.ERROR_MESSAGE);
-				return null;
-				}
-			else
-				return k.get((int)(Math.random() * (k.size())));
-			
-		default:
+		if(i.size() < 1) {
+			JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau "+ n +", pour le theme " + theme+ " veuillez en ajouter ! ", "error",
+					JOptionPane.ERROR_MESSAGE);
 			return null;
-			
 		}
+		else
+			return i.get((int)(Math.random() * (i.size())));
 		
 	}
+		
+		
+
 		
 	
 

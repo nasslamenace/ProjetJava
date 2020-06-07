@@ -175,6 +175,11 @@ public class Main extends JFrame{
     playersPan.setLayout(new BoxLayout(playersPan, BoxLayout.PAGE_AXIS));
     playersPan.add(EnsJoueurs.afficher());
     
+    MyPanel questionsPan = new MyPanel();
+    
+    //questionsPan.setLayout(new BoxLayout(playersPan, BoxLayout.PAGE_AXIS));
+    //questionsPan.add(EnsJoueurs.afficher());
+    
     MyPanel addQuestionPan = new MyPanel();
     
     addQuestionPan.setLayout(new BoxLayout(addQuestionPan, BoxLayout.PAGE_AXIS));
@@ -191,8 +196,8 @@ public class Main extends JFrame{
     for(int i = 0; i < Theme.themes.size(); i++)
       themesBox.addItem(Theme.themes.get(i));
     
-    questionTypeBox.addItem("QCM");
-      questionTypeBox.addItem("Vrai/Faux");
+    	questionTypeBox.addItem("QCM");
+    	questionTypeBox.addItem("Vrai/Faux");
         questionTypeBox.addItem("Réponse courte");
         
         niveauBox.addItem(Niveau.facile.toString());
@@ -295,6 +300,8 @@ public class Main extends JFrame{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    	
+      ArrayList<Question> questions = FileManager.retrieveQuestions((String)themesBox.getSelectedItem());
       
       switch((String)questionTypeBox.getSelectedItem()) {
         case "QCM":
@@ -302,7 +309,6 @@ public class Main extends JFrame{
             JOptionPane.showMessageDialog(null, "Veuillez remplir tout les champs !", "error",
                 JOptionPane.ERROR_MESSAGE);
           else {
-            ArrayList<Question> questions = FileManager.retrieveQuestions((String)themesBox.getSelectedItem());
             
             ArrayList<String> choix = new ArrayList<String>();
             
@@ -329,24 +335,114 @@ public class Main extends JFrame{
                 
                 break;
               case "moyen":
-                q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponseTf.getText()));
+                  switch((String)reponsesBox.getSelectedItem()) {
+                  case "reponse 1":
+                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+                    break;
+                  case "reponse 2":
+                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+                    break;
+                  case "reponse 3":
+                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+                    break;
+                  }
                 break;
               case "difficile":
-                q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponseTf.getText()));
+                  switch((String)reponsesBox.getSelectedItem()) {
+                  case "reponse 1":
+                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+                    break;
+                  case "reponse 2":
+                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+                    break;
+                  case "reponse 3":
+                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+                    break;
+                  }
                 break;
             }
             
             questions.add(q);
             
             FileManager.updateQuestion(questions, (String)themesBox.getSelectedItem());
+            JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
+                    JOptionPane.INFORMATION_MESSAGE);
+            
+            mainLayout.show(mainContainer, "Menu");
+            wholeContainer.remove(cancelContainer);
           }
           break;
         case "Vrai/Faux":
+        	
+            if(enonceTf.getText().isEmpty())
+                JOptionPane.showMessageDialog(null, "Veuillez remplir tout les champs !", "error",
+                    JOptionPane.ERROR_MESSAGE);
+              else {
+                
+                
+                
+                Question q = null;
+                
+                switch((String)niveauBox.getSelectedItem()){
+                  case "facile":
+                	  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                    break;
+                  case "moyen":
+                	  q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                    break;
+                  case "difficile":
+                	  q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                    break;
+                }
+                
+                questions.add(q);
+                
+                FileManager.updateQuestion(questions, (String)themesBox.getSelectedItem());
+                JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
+                        JOptionPane.INFORMATION_MESSAGE);
+                
+                mainLayout.show(mainContainer, "Menu");
+                wholeContainer.remove(cancelContainer);
+              }
+        	
           break;
         case "Réponse courte":
+            if(enonceTf.getText().isEmpty() || reponseTf.getText().isEmpty())
+                JOptionPane.showMessageDialog(null, "Veuillez remplir tout les champs !", "error",
+                    JOptionPane.ERROR_MESSAGE);
+              else {
+                
+                
+                Question q = null;
+                
+                switch((String)niveauBox.getSelectedItem()){
+                  case "facile":
+                	  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                    break;
+                  case "moyen":
+                	  q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                    break;
+                  case "difficile":
+                	  q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                    break;
+                }
+                
+                questions.add(q);
+                
+                FileManager.updateQuestion(questions, (String)themesBox.getSelectedItem());
+                JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
+                        JOptionPane.INFORMATION_MESSAGE);
+                
+                mainLayout.show(mainContainer, "Menu");
+                wholeContainer.remove(cancelContainer);
+              }
           break;
       }
-      
+      enonceTf.setText("");
+      reponseTf.setText("");
+      reponse1Tf.setText("");
+      reponse2Tf.setText("");
+      reponse3Tf.setText("");
       
     }
       
