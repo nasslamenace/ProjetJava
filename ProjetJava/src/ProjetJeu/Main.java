@@ -33,6 +33,7 @@ import javax.swing.border.Border;
 public class Main extends JFrame{
   
   
+  String chosenTheme;
   
   //MENU COMPONENT
   private MyButton displayThemes = new MyButton("Afficher les themes");
@@ -70,6 +71,10 @@ public class Main extends JFrame{
   
   
   private MyButton addBtn = new MyButton("Ajouter");
+  
+  //DISPLAY QUESTIONS COMPONENT
+  
+  private JComboBox choixNiveau = new JComboBox();
   
   //Phase de jeu
   
@@ -194,7 +199,7 @@ public class Main extends JFrame{
     choixBg.add(falseBtn);
     
     for(int i = 0; i < Theme.themes.size(); i++)
-      themesBox.addItem(Theme.themes.get(i));
+    	themesBox.addItem(Theme.themes.get(i));
     
     	questionTypeBox.addItem("QCM");
     	questionTypeBox.addItem("Vrai/Faux");
@@ -282,7 +287,14 @@ public class Main extends JFrame{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    	
+		String[] liste = new String[10];
+		
+		for(int i = 0; i < liste.length; i++)
+			liste[i] = Theme.themes.get(i);
       
+	  chosenTheme = (String) JOptionPane.showInputDialog(null, "what kind of service you want to book ?",
+				" ", JOptionPane.QUESTION_MESSAGE, null, liste, liste[9]);
       
       wholeContainer.add(cancelContainer, BorderLayout.NORTH);
       revalidate();
