@@ -293,8 +293,8 @@ public class Main extends JFrame{
 		for(int i = 0; i < liste.length; i++)
 			liste[i] = Theme.themes.get(i);
       
-	  chosenTheme = (String) JOptionPane.showInputDialog(null, "what kind of service you want to book ?",
-				" ", JOptionPane.QUESTION_MESSAGE, null, liste, liste[9]);
+	  chosenTheme = (String) JOptionPane.showInputDialog(null, "Veuillez choisir un theme :",
+				"Choix du theme", JOptionPane.QUESTION_MESSAGE, null, liste, liste[9]);
       
       wholeContainer.add(cancelContainer, BorderLayout.NORTH);
       revalidate();
