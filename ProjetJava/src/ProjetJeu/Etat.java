@@ -18,8 +18,4 @@ public enum Etat {
 	  public String toString(){
 	    return name;
 	  }
-	
-	
-	
-
 }
