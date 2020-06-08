@@ -2,7 +2,7 @@ package ProjetJeu;
 
 import java.util.ArrayList;
 
-public class Phase2 implements Phase {
+public class Phase2 extends MyPanel implements Phase {
 	
 	
 	private ArrayList<Joueur> joueurs;

@@ -75,11 +75,15 @@ public class Main extends JFrame{
   //DISPLAY QUESTIONS COMPONENT
   
   private JComboBox choixNiveau = new JComboBox();
+  MyPanel questionsPan;
   
   //Phase de jeu
   
   private Phase1 phase1 = new Phase1();
   
+  
+  //-------------------------------Affichage des joueurs-----------------------------------------
+  private MyPanel playersPan = new MyPanel();
   
   
   //CONTAINER + LAYOUTS
@@ -117,6 +121,7 @@ public class Main extends JFrame{
 
       @Override
       public void actionPerformed(ActionEvent e) {
+    	phase1.annuler();
         mainLayout.show(mainContainer, "Menu");
         wholeContainer.remove(cancelContainer);
         revalidate();
@@ -137,6 +142,7 @@ public class Main extends JFrame{
      
     
     
+    //-------------------------------PANEL DU MENU-----------------------------------------
     
     MyPanel menuPan = new MyPanel();
 
@@ -169,21 +175,28 @@ public class Main extends JFrame{
     enonceTf.setBorder(blackline);
       
     
+  //-------------------------------PANEL AFFICHAGE THEMES-----------------------------------------
     
     MyPanel themesPan = new MyPanel();
     
     themesPan.setLayout(new BoxLayout(themesPan, BoxLayout.PAGE_AXIS));
     themesPan.add(Theme.afficher());
     
-    MyPanel playersPan = new MyPanel();
+  //-------------------------------PANEL AFFICHAGE JOUEURS-----------------------------------------
+    
+
     
     playersPan.setLayout(new BoxLayout(playersPan, BoxLayout.PAGE_AXIS));
     playersPan.add(EnsJoueurs.afficher());
     
-    MyPanel questionsPan = new MyPanel();
+  //-------------------------------PANEL AFFICHAGE QUESTIONS-----------------------------------------
     
-    //questionsPan.setLayout(new BoxLayout(playersPan, BoxLayout.PAGE_AXIS));
-    //questionsPan.add(EnsJoueurs.afficher());
+    questionsPan = new MyPanel();
+    
+    questionsPan.setLayout(new BoxLayout(questionsPan, BoxLayout.PAGE_AXIS));
+    
+    
+  //-------------------------------PANEL AJOUT DE QUESTIONS-----------------------------------------
     
     MyPanel addQuestionPan = new MyPanel();
     
@@ -244,6 +257,11 @@ public class Main extends JFrame{
       addQuestionPan.add(new JScrollPane(questionContainer));
       
       addBtn.addActionListener(new AddNewQuestionListener());
+      
+      
+
+      
+    //-------------------------------GESTION DU CARD LAYOUT-----------------------------------------
     
     mainContainer.add(menuPan, "Menu");
     mainContainer.add(themesPan, "Theme");
@@ -334,13 +352,13 @@ public class Main extends JFrame{
                 
                 switch((String)reponsesBox.getSelectedItem()) {
                 case "reponse 1":
-                  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+                  q = new Question<QCM>(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
                   break;
                 case "reponse 2":
-                  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+                  q = new Question<QCM>(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
                   break;
                 case "reponse 3":
-                  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+                  q = new Question<QCM>(Niveau.facile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
                   break;
                 }
                 
@@ -349,26 +367,26 @@ public class Main extends JFrame{
               case "moyen":
                   switch((String)reponsesBox.getSelectedItem()) {
                   case "reponse 1":
-                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+                    q = new Question<QCM>(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
                     break;
                   case "reponse 2":
-                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+                    q = new Question<QCM>(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
                     break;
                   case "reponse 3":
-                    q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+                    q = new Question<QCM>(Niveau.moyen, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
                     break;
                   }
                 break;
               case "difficile":
                   switch((String)reponsesBox.getSelectedItem()) {
                   case "reponse 1":
-                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
+                    q = new Question<QCM>(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse1Tf.getText()));
                     break;
                   case "reponse 2":
-                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
+                    q = new Question<QCM>(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse2Tf.getText()));
                     break;
                   case "reponse 3":
-                    q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
+                    q = new Question<QCM>(Niveau.difficile, (String)themesBox.getSelectedItem(), new QCM(enonceTf.getText(), choix, reponse3Tf.getText()));
                     break;
                   }
                 break;
@@ -397,13 +415,13 @@ public class Main extends JFrame{
                 
                 switch((String)niveauBox.getSelectedItem()){
                   case "facile":
-                	  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                	  q = new Question<VF>(Niveau.facile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
                     break;
                   case "moyen":
-                	  q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                	  q = new Question<VF>(Niveau.moyen, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
                     break;
                   case "difficile":
-                	  q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
+                	  q = new Question<VF>(Niveau.difficile, (String)themesBox.getSelectedItem(), new VF(enonceTf.getText(), trueBtn.isSelected()));
                     break;
                 }
                 
@@ -429,13 +447,13 @@ public class Main extends JFrame{
                 
                 switch((String)niveauBox.getSelectedItem()){
                   case "facile":
-                	  q = new Question(Niveau.facile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                	  q = new Question<RC>(Niveau.facile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
                     break;
                   case "moyen":
-                	  q = new Question(Niveau.moyen, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                	  q = new Question<RC>(Niveau.moyen, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
                     break;
                   case "difficile":
-                	  q = new Question(Niveau.difficile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
+                	  q = new Question<RC>(Niveau.difficile, (String)themesBox.getSelectedItem(), new RC(enonceTf.getText(), reponseTf.getText()));
                     break;
                 }
                 
@@ -466,6 +484,15 @@ public class Main extends JFrame{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+      
+      
+        
+      playersPan.removeAll();
+      playersPan.add(EnsJoueurs.afficher());
+      
+      playersPan.revalidate();
+      playersPan.repaint();
+      
       
       
       mainLayout.show(mainContainer, "Players");

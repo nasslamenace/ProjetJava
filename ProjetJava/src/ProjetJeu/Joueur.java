@@ -1,8 +1,9 @@
 package ProjetJeu;
 
 import javax.swing.BoxLayout;
+import javax.swing.Timer;
 
-public class Joueur {
+public class Joueur extends Thread implements Comparable{
 	
 	public static int numJoueurs = 100;
 	
@@ -10,6 +11,7 @@ public class Joueur {
 	private int numero;
 	private int score;
 	private Etat etat;
+	private Timer t;
 	
 	
 	public Joueur(String nom) {	
@@ -18,6 +20,9 @@ public class Joueur {
 		etat = Etat.enAttente;
 		numJoueurs += 10;
 		this.setNom(nom);
+		
+		this.t = new Timer(10, null);
+		this.t.setInitialDelay(0);
 	}
 	
 	
@@ -35,6 +40,28 @@ public class Joueur {
 		return container;
 	}
 	
+
+	
+	public void startTimer() {
+		if(t.getDelay() > 0)
+			t.restart();
+		else
+			t.start();
+	}
+	
+	public void resetTimer() {
+		t.stop();
+		t.setDelay(0);
+	}
+	
+	public void stopTimer() {
+		t.stop();
+	}
+	
+	
+	public int getTime() {
+		return t.getDelay();
+	}
 	
 	public void MAJScore(TypePhase p) {
 		switch(p) {
@@ -81,6 +108,17 @@ public class Joueur {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+
+	@Override
+	public int compareTo(Object o) {
+	      if(o.getClass().equals(Joueur.class)){
+	          Joueur j = (Joueur)o;
+	          return Integer.compare(this.score, j.getScore());
+	       }
+	       return -1;
+
 	}
 	
 	
