@@ -12,13 +12,11 @@ public class QCM extends TypeQuestion{
 	private ArrayList<String> reponsesPossibles;
 	private String reponse;
 	
-	
+	ArrayList<JRadioButton> reponsesPossiblesRb = new ArrayList<JRadioButton>();
 	
 	
 	
 	public QCM(String question, ArrayList<String>choix, String reponse) {
-		
-		ArrayList<JRadioButton> reponsesPossiblesRb = new ArrayList<JRadioButton>();
 		
 		this.question = question;
 		this.reponsesPossibles = choix;
@@ -26,9 +24,9 @@ public class QCM extends TypeQuestion{
 		
 		for(int i = 0; i < choix.size(); i++) {
 			if(i == 0)
-				reponsesPossiblesRb.add(new JRadioButton(choix.get(i), true));
+				this.reponsesPossiblesRb.add(new JRadioButton(choix.get(i), true));
 			else
-				reponsesPossiblesRb.add(new JRadioButton(choix.get(i), false));
+				this.reponsesPossiblesRb.add(new JRadioButton(choix.get(i), false));
 			
 		}
 		
@@ -36,8 +34,6 @@ public class QCM extends TypeQuestion{
 	
 	
 	public MyPanel afficher() {
-		
-		ArrayList<JRadioButton> reponsesPossiblesRb = new ArrayList<JRadioButton>();
 		
 		MyPanel p = new MyPanel();
 		
@@ -105,7 +101,6 @@ public class QCM extends TypeQuestion{
 
 	@Override
 	public String getSaisie() {
-		ArrayList<JRadioButton> reponsesPossiblesRb = new ArrayList<JRadioButton>();
 		
 		for(int i = 0; i < reponsesPossiblesRb.size(); i++)
 			if(reponsesPossiblesRb.get(i).isSelected())
@@ -116,12 +111,11 @@ public class QCM extends TypeQuestion{
 
 	@Override
 	public boolean isRight() {
-		ArrayList<JRadioButton> reponsesPossiblesRb = new ArrayList<JRadioButton>();
 		
 		//System.out.println(reponse + "nn");
 		
-		for(int i = 0; i < reponsesPossiblesRb.size(); i++) {
-			if(reponsesPossiblesRb.get(i).isSelected() && reponsesPossiblesRb.get(i).getText().equals(reponse))
+		for(int i = 0; i < this.reponsesPossiblesRb.size(); i++) {
+			if(this.reponsesPossiblesRb.get(i).isSelected() && this.reponsesPossiblesRb.get(i).getText().equals(reponse))
 				return true;
 		}
 		

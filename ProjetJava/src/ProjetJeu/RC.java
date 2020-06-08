@@ -11,10 +11,9 @@ public class RC extends TypeQuestion {
 	
 	private String bonneReponse;
 	
-	
+	JTextField reponseTf = new JTextField(10);
 	
 	public RC(String question, String bonneReponse) {
-		
 		
 		this.question = question;
 		this.setBonneReponse(bonneReponse);
@@ -22,7 +21,6 @@ public class RC extends TypeQuestion {
 	}
 	
 	public MyPanel afficher() {
-		JTextField reponseTf = new JTextField(10);
 		
 		MyPanel p = new MyPanel();
 		
@@ -63,13 +61,11 @@ public class RC extends TypeQuestion {
 
 	@Override
 	public String getSaisie() {
-		JTextField reponseTf = new JTextField(10);
 		return reponseTf.getText();
 	}
 
 	@Override
 	public boolean isRight() {
-		JTextField reponseTf = new JTextField(10);
 		String temp = reponseTf.getText();
 		reponseTf.setText("");
 		return temp.equals(this.bonneReponse);
