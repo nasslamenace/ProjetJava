@@ -7,6 +7,10 @@ import javax.swing.BoxLayout;
 public class Question<T extends TypeQuestion> implements Serializable {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2532280781541525712L;
 	private Niveau niveau;
 	private String theme;
 	private T enonce;

@@ -144,6 +144,16 @@ public class Phase1 extends MyPanel implements Phase {
 					annonceLbl.setHorizontalAlignment(SwingConstants.CENTER);
 					
 					
+					questionPan.add(q.afficher());
+					
+					questionPan.revalidate();
+					questionPan.repaint();
+					revalidate();
+					repaint();
+					
+					//add(questionPan, BorderLayout.CENTER);
+					
+					
 					revalidate();
 					repaint();
 					
@@ -152,42 +162,13 @@ public class Phase1 extends MyPanel implements Phase {
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							
-							System.out.println("uygfd");
 							
 							
-							if(q.getEnonce().isRight())
-								egalite.get(compteurJoueur).MAJScore(TypePhase.phase1);
 							
 							
-							annonceLbl.setText("C'est au Joueur " + egalite.get(compteurJoueur).getNom() + " de jouer");
+
 							
-							//questionPan.removeAll();
-							
-							revalidate();
-							repaint();
-							
-							//remove(questionPan);
-							 
-							revalidate();
-							repaint();
-							
-							questionPan.removeAll();
-							
-							q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
-							//System.out.println(q.getEnonce().getQuestion());
-							questionPan.add(q.afficher());
-							
-							questionPan.revalidate();
-							questionPan.repaint();
-							
-							add(questionPan, BorderLayout.CENTER);
-							questionPan.revalidate();
-							questionPan.repaint();
-							
-							revalidate();
-							repaint();
-							
-							if(compteurJoueur >= egalite.size()) {
+							if(compteurJoueur >= egalite.size() - 1) {
 								for(int i = 0; i < egalite.size(); i++)
 									System.out.println(egalite.get(i).getScore() + "   " + egalite.get(i).getNom());
 								System.out.println("Fin de la phase 1");
@@ -235,6 +216,39 @@ public class Phase1 extends MyPanel implements Phase {
 								
 							}
 							else {
+								
+								if(q.getEnonce().isRight())
+									egalite.get(compteurJoueur).MAJScore(TypePhase.phase1);
+								
+								
+								annonceLbl.setText("C'est au tour de " + egalite.get(compteurJoueur).getNom() + " de jouer");
+								
+								//questionPan.removeAll();
+								
+								revalidate();
+								repaint();
+								
+								//remove(questionPan);
+								 
+								revalidate();
+								repaint();
+								
+								questionPan.removeAll();
+								
+								q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
+								//System.out.println(q.getEnonce().getQuestion());
+								questionPan.add(q.afficher());
+								
+								questionPan.revalidate();
+								questionPan.repaint();
+								
+								add(questionPan, BorderLayout.CENTER);
+								questionPan.revalidate();
+								questionPan.repaint();
+								
+								revalidate();
+								repaint();
+								
 								egalite.get(compteurJoueur).stopTimer();
 								egalite.get(compteurJoueur).startTimer();
 								if(compteurQuestion >= 3) {
@@ -251,15 +265,7 @@ public class Phase1 extends MyPanel implements Phase {
 						
 					});
 					
-					questionPan = q.afficher();
-					
-					questionPan.revalidate();
-					questionPan.repaint();
-					revalidate();
-					repaint();
-					
-					add(questionPan, BorderLayout.CENTER);
-					add(confirmBtn, BorderLayout.SOUTH);
+
 					
 
 				}
@@ -320,7 +326,7 @@ public class Phase1 extends MyPanel implements Phase {
 			annonceLbl.setBackground(Color.white);
 			
 			
-			annonceLbl.setText("C'est au joueurs " + joueurs.get(compteurJoueur).getNom() + " de jouer");
+			annonceLbl.setText("C'est au tour de  " + joueurs.get(compteurJoueur).getNom() + " de jouer");
 			annonceLbl.setHorizontalAlignment(SwingConstants.CENTER);
 			
 			confirmBtn.addActionListener(new ActionListener() {
