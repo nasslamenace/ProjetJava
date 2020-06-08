@@ -13,9 +13,7 @@ public class VF extends TypeQuestion{
 	private boolean isTrue;
 	
 	
-	ButtonGroup choixBg = new ButtonGroup();
-	JRadioButton trueBtn = new JRadioButton("Vrai", true);
-	JRadioButton falseBtn = new JRadioButton("Faux", false);
+
 	
 	
 	
@@ -29,6 +27,9 @@ public class VF extends TypeQuestion{
 	
 	
 	public MyPanel afficher() {
+		ButtonGroup choixBg = new ButtonGroup();
+		JRadioButton trueBtn = new JRadioButton("Vrai", true);
+		JRadioButton falseBtn = new JRadioButton("Faux", false);
 		
 		MyPanel p = new MyPanel();
 		
@@ -38,7 +39,7 @@ public class VF extends TypeQuestion{
 		
 		
 		
-		ButtonGroup choixBg = new ButtonGroup();
+		//ButtonGroup choixBg = new ButtonGroup();
 		
 		
 
@@ -84,6 +85,9 @@ public class VF extends TypeQuestion{
 
 	@Override
 	public String getSaisie() {
+		ButtonGroup choixBg = new ButtonGroup();
+		JRadioButton trueBtn = new JRadioButton("Vrai", true);
+		JRadioButton falseBtn = new JRadioButton("Faux", false);
 		
 		return trueBtn.isSelected() ? trueBtn.getText() : falseBtn.getText();
 	}
@@ -91,6 +95,9 @@ public class VF extends TypeQuestion{
 
 	@Override
 	public boolean isRight() {
+		ButtonGroup choixBg = new ButtonGroup();
+		JRadioButton trueBtn = new JRadioButton("Vrai", true);
+		JRadioButton falseBtn = new JRadioButton("Faux", false);
 		
 		if(trueBtn.isSelected() && this.isTrue)
 			return true;
