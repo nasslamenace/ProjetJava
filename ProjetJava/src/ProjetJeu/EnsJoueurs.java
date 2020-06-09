@@ -14,7 +14,7 @@ public class EnsJoueurs {
 	
 
 	
-	private static ArrayList<Joueur> joueurs = creer();
+	public static ArrayList<Joueur> joueurs = creer();
 	
 	
 	public EnsJoueurs() {

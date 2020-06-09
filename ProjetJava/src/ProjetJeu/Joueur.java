@@ -1,5 +1,8 @@
 package ProjetJeu;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.BoxLayout;
 import javax.swing.Timer;
 
@@ -12,6 +15,7 @@ public class Joueur extends Thread implements Comparable{
 	private int score;
 	private Etat etat;
 	private Timer t;
+	private int milliSecondes;
 	
 	
 	public Joueur(String nom) {	
@@ -19,9 +23,18 @@ public class Joueur extends Thread implements Comparable{
 		score = 0;
 		etat = Etat.enAttente;
 		numJoueurs += 10;
+		milliSecondes = 0; 
 		this.setNom(nom);
 		
-		this.t = new Timer(10, null);
+		this.t = new Timer(10, new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				milliSecondes += 1;
+				
+			}
+			
+		});
 		this.t.setInitialDelay(0);
 	}
 	
@@ -40,18 +53,21 @@ public class Joueur extends Thread implements Comparable{
 		return container;
 	}
 	
+	@Override
+	public void run() {
+		this.startTimer();
+	}
+	
 
 	
 	public void startTimer() {
-		if(t.getDelay() > 0)
-			t.restart();
-		else
 			t.start();
 	}
 	
 	public void resetTimer() {
 		t.stop();
-		t.setDelay(0);
+
+		this.milliSecondes = 0;
 	}
 	
 	public void stopTimer() {
@@ -60,10 +76,13 @@ public class Joueur extends Thread implements Comparable{
 	
 	
 	public int getTime() {
-		return t.getDelay();
+		return milliSecondes;
 	}
 	
 	public void MAJScore(TypePhase p) {
+		
+		//System.out.println("---------->" + this.nom);
+		
 		switch(p) {
 		case phase1:
 			score += 2;
@@ -76,6 +95,9 @@ public class Joueur extends Thread implements Comparable{
 			break;
 		}
 	}
+	
+	
+	
 	
 	
 	
@@ -115,6 +137,10 @@ public class Joueur extends Thread implements Comparable{
 	public int compareTo(Object o) {
 	      if(o.getClass().equals(Joueur.class)){
 	          Joueur j = (Joueur)o;
+	          
+	          if(Integer.compare(this.score, j.getScore()) == 0)
+	              return Integer.compare(this.getTime(), j.getTime());
+	          
 	          return Integer.compare(this.score, j.getScore());
 	       }
 	       return -1;
