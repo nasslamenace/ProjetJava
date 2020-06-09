@@ -14,7 +14,7 @@ public class EnsJoueurs {
 	
 
 	
-	public static ArrayList<Joueur> joueurs = creer();
+	private static ArrayList<Joueur> joueurs = creer();
 	
 	
 	public EnsJoueurs() {
@@ -74,12 +74,12 @@ public class EnsJoueurs {
 		}
 	}
 	
-	public static Joueur selectionnerJoueur() {
+	public static Joueur selectionnerJoueur(Etat e) {
 		
 		Stream<Joueur> joueurStream = joueurs.stream();
 		
 		
-		ArrayList<Joueur> i = (ArrayList<Joueur>) joueurStream.filter(x -> x.getEtat() == Etat.enAttente)
+		ArrayList<Joueur> i = (ArrayList<Joueur>) joueurStream.filter(x -> x.getEtat() == e)
 				.collect(Collectors.toList());
 		
 		System.out.println("SELECTIONER ENS JOUEURS :");

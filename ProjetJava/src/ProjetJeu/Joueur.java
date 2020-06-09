@@ -2,6 +2,7 @@ package ProjetJeu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.Timer;
@@ -16,6 +17,7 @@ public class Joueur extends Thread implements Comparable{
 	private Etat etat;
 	private Timer t;
 	private int milliSecondes;
+	private ArrayList<String> chosenThemes = new ArrayList<String>();
 	
 	
 	public Joueur(String nom) {	
@@ -36,6 +38,10 @@ public class Joueur extends Thread implements Comparable{
 			
 		});
 		this.t.setInitialDelay(0);
+	}
+	
+	public void addTheme(String theme) {
+		chosenThemes.add(theme);
 	}
 	
 	
@@ -94,6 +100,10 @@ public class Joueur extends Thread implements Comparable{
 			score += 5;
 			break;
 		}
+	}
+	
+	public ArrayList<String> getChosenTheme(){
+		return chosenThemes;
 	}
 	
 	

@@ -44,7 +44,7 @@ public class Phase1 extends MyPanel implements Phase {
 		System.out.println("SELECTIONER JOUEUR : ");
 			
 		for(int i = 0; i <= 3; i++) {
-			Joueur j = EnsJoueurs.selectionnerJoueur();
+			Joueur j = EnsJoueurs.selectionnerJoueur(Etat.enAttente);
 			
 			if(j != null)
 				joueurs.add(j);
@@ -79,11 +79,11 @@ public class Phase1 extends MyPanel implements Phase {
 		
 		
 		
-		int min = egalite.get(0).getTime();
+		int max = egalite.get(egalite.size() - 1).getTime();
 		ArrayList<Joueur> egaliteTime = new ArrayList<Joueur>();
 		
 		for(int i = 0; i < egalite.size(); i++) {
-			if(egalite.get(i).getTime() == min)
+			if(egalite.get(i).getTime() == max)
 				egaliteTime.add(egalite.get(i));
 			else
 				egalite.get(i).changerEtat(Etat.gagnant);
@@ -101,13 +101,13 @@ public class Phase1 extends MyPanel implements Phase {
 			this.repaint();
 			
 			String texte = "";
-			for(int i = 0; i < egalite.size(); i++) texte += ((i == 0) ? "" : "|") + egalite.get(i).getNom() + " " ;
+			for(int i = 0; i < egalite.size(); i++) texte += ((i == 0) ? " " : " et ") + egalite.get(i).getNom() + " " ;
 			
 			
 			
 			annonceLbl.setText("<html>Il y a égalité entre les joueurs : <br>" + 
-					"" + texte + "\nIl va falloir les departager<br> "
-							+ "chacun va répondre a 3 question de niveau facile sur le theme " + theme + "</html>");
+					"" + texte + "<br>Il va falloir les departager ! <br><br> "
+							+ "chacun va répondre a 3 question de niveau facile sur le theme : <strong>" + theme + "</strong></html>");
 			
 			this.add(annonceLbl, BorderLayout.NORTH);
 			
@@ -322,13 +322,13 @@ public class Phase1 extends MyPanel implements Phase {
 		
 		}
 		else {
-			egalite.get(0).changerEtat(Etat.elimine);
+			egalite.get(egalite.size() - 1).changerEtat(Etat.elimine);
 			removeAll();
 			add(new Phase2(), BorderLayout.CENTER);
 			revalidate();
 			repaint();
-			for(int i = 0; i < EnsJoueurs.joueurs.size(); i++)
-				System.out.println("-----------------\n" + EnsJoueurs.joueurs.get(i).getNom() + "     " + EnsJoueurs.joueurs.get(i).getEtat());
+			//for(int i = 0; i < EnsJoueurs.joueurs.size(); i++)
+				//System.out.println("-----------------\n" + EnsJoueurs.joueurs.get(i).getNom() + "     " + EnsJoueurs.joueurs.get(i).getEtat());
 		}
 		
 		

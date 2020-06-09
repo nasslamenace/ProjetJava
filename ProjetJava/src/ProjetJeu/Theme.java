@@ -67,6 +67,44 @@ public class Theme {
 		}
 	}
 	
+	public static ArrayList<String> themeDisponibles(){
+		
+		ArrayList<String> availableThemes = new ArrayList<String>();
+		
+		for(int i = 0; i < themes.size(); i++) {
+			if(indicateurs.indexOf(themes.indexOf(themes.get(i))) == -1)
+				availableThemes.add(themes.get(i));
+		}
+		
+		return availableThemes;
+		
+	}
+	
+	public static int selectionerThemePhase2(String theme) {
+		
+		if(themes.indexOf(theme) == -1) {
+			JOptionPane.showMessageDialog(null, "Le theme " + theme + "n'existe pas, vous ne pouvez pas le modifier ! ", "error",
+					JOptionPane.ERROR_MESSAGE);
+			
+		}
+		else if (indicateurs.indexOf(themes.indexOf(theme)) != -1){
+			
+			JOptionPane.showMessageDialog(null, "Le theme " + theme + "a déja été séléctionné ", "error",
+					JOptionPane.ERROR_MESSAGE);
+
+		}
+		else {
+			int temp = currentTheme;
+			currentTheme = themes.indexOf(theme);
+			
+			indicateurs.add(currentTheme);
+			
+			return temp;
+		}
+		return currentTheme;
+	}
+	
+	
 	public static int selectionerThemePhase1() {
 
 		int temp = currentTheme;
@@ -75,6 +113,14 @@ public class Theme {
 		else
 			currentTheme++;
 		return temp;
+	}
+	
+	public static void reinitialiser() {
+		indicateurs.clear();
+	}
+	
+	public static String getThemeCourant() {
+		return themes.get(currentTheme);
 	}
 	
 	

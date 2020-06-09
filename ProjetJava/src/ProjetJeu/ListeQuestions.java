@@ -125,11 +125,11 @@ public class ListeQuestions {
 		Stream<Question> questionStream = this.questions.stream();
 		
 		
-		ArrayList<Question> i = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == Niveau.facile)
+		ArrayList<Question> i = (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == n)
 				.collect(Collectors.toList());
 
 		if(i.size() < 1) {
-			JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau "+ n +", pour le theme " + theme+ " veuillez en ajouter ! ", "error",
+			JOptionPane.showMessageDialog(null, "Il n'y a pas de question de niveau "+ n +", pour le theme " + theme + " veuillez en ajouter ! ", "error",
 					JOptionPane.ERROR_MESSAGE);
 			return null;
 		}
