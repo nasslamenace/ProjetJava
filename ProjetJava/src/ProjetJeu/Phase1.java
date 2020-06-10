@@ -18,12 +18,12 @@ public class Phase1 extends MyPanel implements Phase {
 	private ArrayList<Joueur> joueurs;
 	private ArrayList<Joueur> egalite = new ArrayList<Joueur>();
 	private Theme theme;
-	MyLabel annonceLbl = new MyLabel();
+	private MyLabel annonceLbl = new MyLabel();
 	private MyButton confirmBtn = new MyButton("Confirmer");
 	
-	Question q;
+	private Question q;
 	
-	MyPanel questionPan ;
+	private MyPanel questionPan ;
 	
 	private int compteurJoueur;
 	private int compteurQuestion;
@@ -68,8 +68,10 @@ public class Phase1 extends MyPanel implements Phase {
 		}
 		joueurs.clear();
 		compteurJoueur = 0;
+		compteurQuestion = 0;
+		EnsJoueurs.reinitialiserEtat();
 		
-
+		removeAll();
 
 		
 		
@@ -339,6 +341,9 @@ public class Phase1 extends MyPanel implements Phase {
 
 	@Override
 	public void phaseDeJeu() {
+		
+		revalidate();
+		repaint();
 		
 		theme = new Theme(Theme.themes.get(Theme.selectionerThemePhase1()));
 		

@@ -15,12 +15,12 @@ public class Phase2 extends MyPanel implements Phase {
 	private ArrayList<Joueur> joueurs;
 	private ArrayList<Joueur> egalite = new ArrayList<Joueur>();
 	private Theme theme;
-	MyLabel annonceLbl = new MyLabel();
+	private MyLabel annonceLbl = new MyLabel();
 	private MyButton confirmBtn = new MyButton("Confirmer");
 	
-	Question q;
+	private Question q;
 	
-	MyPanel questionPan ;
+	private MyPanel questionPan ;
 	
 	private int compteurJoueur;
 	private int compteurQuestion;
@@ -79,9 +79,12 @@ public class Phase2 extends MyPanel implements Phase {
 	}
 	
 	
-	private void gestionEgalite() {
+	private void gestionEgalite(){
+		
 		int max = egalite.get(egalite.size() - 1).getTime();
 		ArrayList<Joueur> egaliteTime = new ArrayList<Joueur>();
+		
+		
 		
 		for(int i = 0; i < egalite.size(); i++) {
 			if(egalite.get(i).getTime() == max)
@@ -90,6 +93,7 @@ public class Phase2 extends MyPanel implements Phase {
 				egalite.get(i).changerEtat(Etat.gagnant);
 		}
 		
+		theme = new Theme(Theme.themes.get(Theme.selectionerThemePhase1()));
 		
 		if(egaliteTime.size() >= 2) {
 			
@@ -147,7 +151,7 @@ public class Phase2 extends MyPanel implements Phase {
 					
 					questionPan.removeAll();
 					//Question q = new Question(Niveau.facile, Theme.themes.get(Theme.selectionerThemePhase1()), new RC("2 + 2", "4"));
-					q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
+					q = theme.getMesQuestions().selectionnerQuestion(Niveau.moyen);
 					
 					revalidate();
 					repaint();
@@ -224,13 +228,13 @@ public class Phase2 extends MyPanel implements Phase {
 										
 										egalite2.get(0).changerEtat(Etat.elimine);
 										removeAll();
-										add(new Phase2(), BorderLayout.CENTER);
+										add(new Phase3(), BorderLayout.CENTER);
 										revalidate();
 										repaint();
 									}
 									else {
 										removeAll();
-										add(new Phase2(), BorderLayout.CENTER);
+										add(new Phase3(), BorderLayout.CENTER);
 										revalidate();
 										repaint();
 									}
@@ -239,7 +243,7 @@ public class Phase2 extends MyPanel implements Phase {
 								else {
 									
 									if(q.getEnonce().isRight())
-										egalite.get(compteurJoueur).MAJScore(TypePhase.phase1);
+										egalite.get(compteurJoueur).MAJScore(TypePhase.phase2);
 									
 									egalite.get(compteurJoueur).stopTimer();
 									
@@ -268,7 +272,7 @@ public class Phase2 extends MyPanel implements Phase {
 									
 									questionPan.removeAll();
 									
-									q = theme.getMesQuestions().selectionnerQuestion(Niveau.facile);
+									q = theme.getMesQuestions().selectionnerQuestion(Niveau.difficile);
 									//System.out.println(q.getEnonce().getQuestion());
 									questionPan.add(q.afficher());
 									
@@ -325,7 +329,7 @@ public class Phase2 extends MyPanel implements Phase {
 		else {
 			egalite.get(egalite.size() - 1).changerEtat(Etat.elimine);
 			removeAll();
-			add(new Phase2(), BorderLayout.CENTER);
+			add(new Phase3(), BorderLayout.CENTER);
 			revalidate();
 			repaint();
 			//for(int i = 0; i < EnsJoueurs.joueurs.size(); i++)
@@ -441,7 +445,7 @@ public class Phase2 extends MyPanel implements Phase {
 								else {
 									joueurs.get(0).changerEtat(Etat.elimine);
 									removeAll();
-									//add(new Phase2(), BorderLayout.CENTER);
+									add(new Phase3(), BorderLayout.CENTER);
 									
 									revalidate();
 									repaint();

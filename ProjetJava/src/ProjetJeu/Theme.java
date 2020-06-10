@@ -12,6 +12,7 @@ public class Theme {
 	
 	
 	public static ArrayList<String> themes = initialiserTheme();
+	private String myTheme;
 			
 	
 	private static ArrayList<Integer> indicateurs = new ArrayList<Integer>();
@@ -36,6 +37,7 @@ public class Theme {
 	
 	public Theme(String theme) {
 		setMesQuestions(new ListeQuestions(theme));
+		myTheme = theme;
 	}
 	
 	
@@ -66,6 +68,8 @@ public class Theme {
 			return temp;
 		}
 	}
+	
+	
 	
 	public static ArrayList<String> themeDisponibles(){
 		
@@ -132,6 +136,28 @@ public class Theme {
 		int indice;
 		
 		for(int i = 0; i < 5; i++) {
+			
+			do {
+				 indice = (int)(Math.random() * (10));
+			}while(indices.indexOf(indice) != -1);
+			
+			
+			themesSelectionne.add(themes.get(indice));
+			indices.add(indice);
+			
+		}
+		
+		return themesSelectionne;
+		
+	}
+	
+	public static ArrayList<String> selectionnerTroisThemes(){
+		
+		ArrayList<String> themesSelectionne = new ArrayList<String>();
+		ArrayList<Integer> indices = new ArrayList<Integer>();
+		int indice;
+		
+		for(int i = 0; i < 3; i++) {
 			
 			do {
 				 indice = (int)(Math.random() * (10));
@@ -234,6 +260,16 @@ public class Theme {
 
 	public void setMesQuestions(ListeQuestions mesQuestions) {
 		this.mesQuestions = mesQuestions;
+	}
+
+
+	public String getMyTheme() {
+		return myTheme;
+	}
+
+
+	public void setMyTheme(String myTheme) {
+		this.myTheme = myTheme;
 	}
 
 }

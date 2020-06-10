@@ -122,6 +122,17 @@ public class Main extends JFrame{
       @Override
       public void actionPerformed(ActionEvent e) {
     	phase1.annuler();
+    	
+    	phase1 = null;
+    	
+    	phase1 = new Phase1();
+    	
+    	phase1.revalidate();
+    	phase1.repaint();
+    	mainContainer.add(phase1, "Jeu");
+    	mainContainer.revalidate();
+    	mainContainer.repaint();
+    	
         mainLayout.show(mainContainer, "Menu");
         wholeContainer.remove(cancelContainer);
         revalidate();

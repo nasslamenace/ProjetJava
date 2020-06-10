@@ -60,8 +60,12 @@ public class EnsJoueurs {
 	}
 	
 	public static void reinitialiserEtat() {
-		for(int i = 0; i < joueurs.size(); i++)
+		for(int i = 0; i < joueurs.size(); i++) {
 			joueurs.get(i).changerEtat(Etat.enAttente);
+			joueurs.get(i).setScore(0);
+			joueurs.get(i).resetTimer();
+			System.out.println(joueurs.get(i).getEtat());
+		}
 	}
 	
 	public static void modifJoueur(Joueur joueur) {
