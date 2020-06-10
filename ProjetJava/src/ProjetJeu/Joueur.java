@@ -52,6 +52,7 @@ public class Joueur extends Thread implements Comparable{
 		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
 		
 		container.add(new MyLabel("Numero : " + numero));
+		container.add(new MyLabel("Nom : " + nom));
 		container.add(new MyLabel("Score : " + score));
 		container.add(new MyLabel("Etat: " + etat));
 		

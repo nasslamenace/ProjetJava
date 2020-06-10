@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.swing.BoxLayout;
+import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
 public class Phase3 extends MyPanel implements Phase{
@@ -53,22 +55,43 @@ public class Phase3 extends MyPanel implements Phase{
 	}
 	
 	public void fin() {
+		Joueur superGagnant = EnsJoueurs.selectionnerJoueur(Etat.superGagnant);
+		ArrayList<Joueur> elimine = EnsJoueurs.selectionnerCategorie(Etat.elimine);
+		
+		MyPanel container = new MyPanel();
+		
+		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
+		
+		container.add(new MyLabel("<html><strong>Le super gagnant du jeu des question est : </strong></html>"));
+		container.add(superGagnant.afficher());
+		container.add(new MyLabel("Les joueurs éliminés sont :"));
+		for(int i = 0; i < elimine.size(); i++)
+			container.add(elimine.get(i).afficher());
+		
+		add(new JScrollPane(container), BorderLayout.CENTER);
+		
+		revalidate();
+		repaint();
+		
+		
 		
 	}
 	
 private void gestionEgalite(){
 		
-		int max = egalite.get(egalite.size() - 1).getTime();
-		ArrayList<Joueur> egaliteTime = new ArrayList<Joueur>();
-		
-		
-		
-		for(int i = 0; i < egalite.size(); i++) {
-			if(egalite.get(i).getTime() == max)
-				egaliteTime.add(egalite.get(i));
-			else
-				egalite.get(i).changerEtat(Etat.gagnant);
-		}
+	
+	
+	int max = egalite.get(egalite.size() - 1).getTime();
+	ArrayList<Joueur> egaliteTime = new ArrayList<Joueur>();
+	
+	
+	
+	for(int i = 0; i < egalite.size(); i++) {
+		if(egalite.get(i).getTime() == max)
+			egaliteTime.add(egalite.get(i));
+		else
+			egalite.get(i).changerEtat(Etat.gagnant);
+	}
 		
 
 		
@@ -165,6 +188,18 @@ private void gestionEgalite(){
 								
 								
 								
+								if(q.getEnonce().isRight())
+									egalite.get(compteurJoueur).MAJScore(TypePhase.phase2);
+								
+								egalite.get(compteurJoueur).stopTimer();
+								
+
+								if(compteurQuestion >= 3) {
+									compteurJoueur++;
+									compteurQuestion = 1;
+								}
+								else
+									compteurQuestion++;
 	
 	
 								
@@ -192,26 +227,26 @@ private void gestionEgalite(){
 											egalite2.add(egalite.get(i));
 										}
 										else {
-											egalite.get(i).changerEtat(Etat.gagnant);
+											egalite.get(i).changerEtat(Etat.superGagnant);
 										}
 									}
 									
 									if(egalite2.size() >= 2) {
-										for(int i = 0; i < egalite2.size() - 1; i++) {
-											int nb = (int)(Math.random() * (egalite2.size()));
-											egalite2.get(nb).changerEtat(Etat.gagnant);
-											egalite2.remove(nb);
-										}
+										int nb = (int)(Math.random() * (egalite2.size()));
+										egalite2.get(nb).changerEtat(Etat.elimine);
+										egalite2.remove(nb);
 										
-										egalite2.get(0).changerEtat(Etat.elimine);
+										for(int i = 0; i < egalite2.size(); i++) {
+											egalite2.get(i).changerEtat(Etat.superGagnant);
+										}
 										removeAll();
-										add(new Phase3(), BorderLayout.CENTER);
+										fin();
 										revalidate();
 										repaint();
 									}
 									else {
 										removeAll();
-										add(new Phase3(), BorderLayout.CENTER);
+										fin();
 										revalidate();
 										repaint();
 									}
@@ -219,18 +254,7 @@ private void gestionEgalite(){
 								}
 								else {
 									
-									if(q.getEnonce().isRight())
-										egalite.get(compteurJoueur).MAJScore(TypePhase.phase2);
-									
-									egalite.get(compteurJoueur).stopTimer();
-									
-	
-									if(compteurQuestion >= 3) {
-										compteurJoueur++;
-										compteurQuestion = 1;
-									}
-									else
-										compteurQuestion++;
+
 									
 									
 									if(compteurJoueur < egalite.size()) {
@@ -249,7 +273,7 @@ private void gestionEgalite(){
 									
 									questionPan.removeAll();
 									
-									q = themes.get(0).getMesQuestions().selectionnerQuestion(Niveau.facile);
+									q = themes.get(0).getMesQuestions().selectionnerQuestion(Niveau.difficile);
 									//System.out.println(q.getEnonce().getQuestion());
 									questionPan.add(q.afficher());
 									
@@ -306,7 +330,7 @@ private void gestionEgalite(){
 		else {
 			egalite.get(egalite.size() - 1).changerEtat(Etat.elimine);
 			removeAll();
-			add(new Phase3(), BorderLayout.CENTER);
+			fin();
 			revalidate();
 			repaint();
 			//for(int i = 0; i < EnsJoueurs.joueurs.size(); i++)
@@ -418,7 +442,7 @@ private void gestionEgalite(){
 										egalite.add(joueurs.get(i));
 									}
 									else {
-										joueurs.get(i).changerEtat(Etat.gagnant);
+										joueurs.get(i).changerEtat(Etat.superGagnant);
 									}
 									System.out.println(joueurs.get(i).getNom() + "   " + joueurs.get(i).getScore() + "   " + joueurs.get(i).getTime() );
 								}

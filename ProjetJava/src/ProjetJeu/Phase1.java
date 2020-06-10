@@ -109,7 +109,7 @@ public class Phase1 extends MyPanel implements Phase {
 			
 			annonceLbl.setText("<html>Il y a égalité entre les joueurs : <br>" + 
 					"" + texte + "<br>Il va falloir les departager ! <br><br> "
-							+ "chacun va répondre a 3 question de niveau facile sur le theme : <strong>" + theme + "</strong></html>");
+							+ "chacun va répondre a 3 question de niveau facile sur le theme : <strong>" + theme.getMyTheme() + "</strong></html>");
 			
 			this.add(annonceLbl, BorderLayout.NORTH);
 			
@@ -184,6 +184,19 @@ public class Phase1 extends MyPanel implements Phase {
 							public void actionPerformed(ActionEvent e) {
 								
 								
+								if(q.getEnonce().isRight())
+									egalite.get(compteurJoueur).MAJScore(TypePhase.phase1);
+								
+								egalite.get(compteurJoueur).stopTimer();
+								
+
+								
+								if(compteurQuestion >= 3) {
+									compteurJoueur++;
+									compteurQuestion = 1;
+								}
+								else
+									compteurQuestion++;
 								
 	
 	
@@ -217,13 +230,16 @@ public class Phase1 extends MyPanel implements Phase {
 									}
 									
 									if(egalite2.size() >= 2) {
-										for(int i = 0; i < egalite2.size() - 1; i++) {
-											int nb = (int)(Math.random() * (egalite2.size()));
-											egalite2.get(nb).changerEtat(Etat.gagnant);
-											egalite2.remove(nb);
+										
+										int nb = (int)(Math.random() * (egalite2.size()));
+										egalite2.get(nb).changerEtat(Etat.elimine);
+										egalite2.remove(nb);
+										
+										for(int i = 0; i < egalite2.size(); i++) {
+											egalite2.get(i).changerEtat(Etat.gagnant);
 										}
 										
-										egalite2.get(0).changerEtat(Etat.elimine);
+										
 										removeAll();
 										add(new Phase2(), BorderLayout.CENTER);
 										revalidate();
@@ -239,18 +255,8 @@ public class Phase1 extends MyPanel implements Phase {
 								}
 								else {
 									
-									if(q.getEnonce().isRight())
-										egalite.get(compteurJoueur).MAJScore(TypePhase.phase1);
-									
-									egalite.get(compteurJoueur).stopTimer();
-									
-	
-									if(compteurQuestion >= 3) {
-										compteurJoueur++;
-										compteurQuestion = 1;
-									}
-									else
-										compteurQuestion++;
+
+
 									
 									
 									if(compteurJoueur < egalite.size()) {

@@ -64,7 +64,7 @@ public class EnsJoueurs {
 			joueurs.get(i).changerEtat(Etat.enAttente);
 			joueurs.get(i).setScore(0);
 			joueurs.get(i).resetTimer();
-			System.out.println(joueurs.get(i).getEtat());
+			//System.out.println(joueurs.get(i).getEtat());
 		}
 	}
 	
@@ -78,7 +78,22 @@ public class EnsJoueurs {
 		}
 	}
 	
+	public static ArrayList<Joueur> selectionnerCategorie(Etat e){
+		
+		Stream<Joueur> joueurStream = joueurs.stream();
+		
+		
+		ArrayList<Joueur> i = (ArrayList<Joueur>) joueurStream.filter(x -> x.getEtat() == Etat.elimine)
+				.collect(Collectors.toList());
+		
+		return i;
+		
+	}
+	
 	public static Joueur selectionnerJoueur(Etat e) {
+		
+		for(int i = 0; i < joueurs.size(); i++)
+			System.out.println(joueurs.get(i).getEtat());
 		
 		Stream<Joueur> joueurStream = joueurs.stream();
 		
@@ -99,7 +114,10 @@ public class EnsJoueurs {
 		else {
 			int nb = (int)(Math.random() * (i.size()));
 			//joueurs.get(nb).changerEtat(Etat.selectione);
-			i.get(nb).changerEtat(Etat.selectione);
+			
+
+			if(e != Etat.superGagnant)
+				i.get(nb).changerEtat(Etat.selectione);
 			
 			return i.get(nb);
 			}
