@@ -412,8 +412,8 @@ public class Main extends JFrame{
             JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
                     JOptionPane.INFORMATION_MESSAGE);
             
-            mainLayout.show(mainContainer, "Menu");
-            wholeContainer.remove(cancelContainer);
+            //mainLayout.show(mainContainer, "Menu");
+            //wholeContainer.remove(cancelContainer);
           }
           break;
         case "Vrai/Faux":
@@ -445,8 +445,8 @@ public class Main extends JFrame{
                 JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
                         JOptionPane.INFORMATION_MESSAGE);
                 
-                mainLayout.show(mainContainer, "Menu");
-                wholeContainer.remove(cancelContainer);
+                //mainLayout.show(mainContainer, "Menu");
+                //wholeContainer.remove(cancelContainer);
               }
         	
           break;
@@ -477,8 +477,8 @@ public class Main extends JFrame{
                 JOptionPane.showMessageDialog(null, "La question a été ajouté avec succès", "Succès",
                         JOptionPane.INFORMATION_MESSAGE);
                 
-                mainLayout.show(mainContainer, "Menu");
-                wholeContainer.remove(cancelContainer);
+                //mainLayout.show(mainContainer, "Menu");
+                //wholeContainer.remove(cancelContainer);
               }
           break;
       }

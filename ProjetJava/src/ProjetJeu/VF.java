@@ -10,6 +10,10 @@ import javax.swing.JTextField;
 
 public class VF extends TypeQuestion{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7015142070950532274L;
 	private String question;
 	private boolean isTrue;
 	
@@ -104,7 +108,7 @@ public class VF extends TypeQuestion{
 
 	@Override
 	public String getReponse() {
-		return isTrue ? "Vrai" : "Faux";
+		return isTrue ? "true" : "false";
 	}
 
 

@@ -1,5 +1,6 @@
 package ProjetJeu;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,15 +18,16 @@ import javax.swing.table.DefaultTableCellRenderer;
 public class QuestionTableModel extends AbstractTableModel {
 	
 	private ArrayList <Question> questionsList;
+	private String theme;
 	
-	private String titles[] = {"question", "reponse", "Afficher"};
+	private String titles[] = {"question", "reponse", "Afficher", "Supprimer"};
 	
-	public QuestionTableModel(ArrayList<Question> questionsList) {
+	public QuestionTableModel(ArrayList<Question> questionsList, String theme) {
 		
 		super();
 		
 
-  	  
+  	  this.theme = theme;
 		
 		this.questionsList = questionsList;
 	}
@@ -86,6 +88,19 @@ public class QuestionTableModel extends AbstractTableModel {
 													}
 			});
 			return button;
+            case 3:
+            	final MyButton suppButton = new MyButton("Supprimer");
+				suppButton.addActionListener(new ActionListener() {
+													public void actionPerformed(ActionEvent arg0) {
+														questionsList.remove(rowIndex);
+														
+														FileManager.updateQuestion(questionsList, theme);
+														fireTableRowsDeleted(rowIndex, rowIndex);
+													}
+			});
+				suppButton.setForeground(Color.RED);
+				
+			return suppButton;
             default:
                 return null; //should never happen
         }
@@ -93,7 +108,7 @@ public class QuestionTableModel extends AbstractTableModel {
 	
     public Class getColumnClass(int col){
     	
-	      if(col != 2)
+	      if(col != 2 || col != 3)
 	    	  return MyLabel.class;
 	      else
 	    	  return MyButton.class;

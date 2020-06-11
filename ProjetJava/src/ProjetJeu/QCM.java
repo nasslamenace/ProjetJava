@@ -9,6 +9,10 @@ import javax.swing.JRadioButton;
 
 public class QCM extends TypeQuestion{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 874346889047189438L;
 	private ArrayList<String> reponsesPossibles;
 	private String reponse;
 	

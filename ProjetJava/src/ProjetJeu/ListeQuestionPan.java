@@ -44,7 +44,7 @@ public class ListeQuestionPan extends MyPanel {
 		
 		Theme myTheme = new Theme(theme);
 		
-		facileModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.facile));
+		facileModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.facile), theme);
 		
 		facileQuestionTable = new MyTable(facileModel);
 		facileQuestionTable.setCellSelectionEnabled(false);
@@ -52,9 +52,10 @@ public class ListeQuestionPan extends MyPanel {
 		
 		TableComponent facilebuttonRenderer = new TableComponent();
 		facileQuestionTable.getColumn("Afficher").setCellRenderer(facilebuttonRenderer);
+		facileQuestionTable.getColumn("Supprimer").setCellRenderer(facilebuttonRenderer);
 		facileQuestionTable.addMouseListener(new JTableButtonMouseListener(facileQuestionTable));
 		
-		moyenModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.moyen));
+		moyenModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.moyen), theme);
 		
 		moyenQuestionTable = new MyTable(moyenModel);
 		moyenQuestionTable.setCellSelectionEnabled(false);
@@ -64,9 +65,10 @@ public class ListeQuestionPan extends MyPanel {
 		
 		TableComponent buttonRenderer = new TableComponent();
 		moyenQuestionTable.getColumn("Afficher").setCellRenderer(buttonRenderer);
+		moyenQuestionTable.getColumn("Supprimer").setCellRenderer(buttonRenderer);
 		moyenQuestionTable.addMouseListener(new JTableButtonMouseListener(moyenQuestionTable));
 		
-		difficileModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.difficile));
+		difficileModel = new QuestionTableModel(myTheme.getMesQuestions().selectionnerQuestions(Niveau.difficile), theme);
 		
 		difficileQuestionTable = new MyTable(difficileModel);
 		difficileQuestionTable.setCellSelectionEnabled(false);
@@ -74,6 +76,7 @@ public class ListeQuestionPan extends MyPanel {
 		
 		TableComponent difficilebuttonRenderer = new TableComponent();
 		difficileQuestionTable.getColumn("Afficher").setCellRenderer(difficilebuttonRenderer);
+		difficileQuestionTable.getColumn("Supprimer").setCellRenderer(difficilebuttonRenderer);
 		difficileQuestionTable.addMouseListener(new JTableButtonMouseListener(difficileQuestionTable));
 		
 		MyPanel boxContainer = new MyPanel();

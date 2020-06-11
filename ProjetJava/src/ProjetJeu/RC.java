@@ -9,6 +9,11 @@ public class RC extends TypeQuestion {
 	
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7811894802190130045L;
+
 	private String bonneReponse;
 	
 	JTextField reponseTf = new JTextField(10);
