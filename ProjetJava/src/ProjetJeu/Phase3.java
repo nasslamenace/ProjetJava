@@ -90,7 +90,7 @@ private void gestionEgalite(){
 		if(egalite.get(i).getTime() == max)
 			egaliteTime.add(egalite.get(i));
 		else
-			egalite.get(i).changerEtat(Etat.gagnant);
+			egalite.get(i).changerEtat(Etat.superGagnant);
 	}
 		
 

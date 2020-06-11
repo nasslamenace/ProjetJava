@@ -81,7 +81,8 @@ public class QuestionTableModel extends AbstractTableModel {
             	final MyButton button = new MyButton("Afficher");
 				button.addActionListener(new ActionListener() {
 													public void actionPerformed(ActionEvent arg0) {
-														System.out.println("hey salut");
+														new QuestionDetailDialog(null, "Check assigned appointment", true,
+					questionsList.get(rowIndex));
 													}
 			});
 			return button;
