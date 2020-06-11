@@ -1,0 +1,210 @@
+facile
+QCM
+Quel fruit a inspiré à Isaac Newton sa plus célèbre théorie ?
+Une pomme
+Une poire
+Une peche
+Une pomme
+fin_question
+moyen
+QCM
+Qu'est-ce qui tourne et permet à un véhicule d'avancer ?
+Ballon
+Roue
+Balle
+Roue
+fin_question
+moyen
+QCM
+Comment s'appelle la force qui attire les objets vers le sol ?
+Gravité
+Attirance
+Fusion
+Gravité
+fin_question
+difficile
+QCM
+Quel mathématicien antique a crié EURÊKA !  en sortant de son bain ?
+Stephen Hawking
+Archimède
+Patricia Telgrow
+Stephen Hawking
+fin_question
+facile
+QCM
+Isaac Newton était...
+Francais
+Anglais
+Allemand
+Anglais
+fin_question
+moyen
+QCM
+Les voitures dotées de moteur à essence sont apparues au...
+XXe siècle
+XIXe siècle
+XVIIIe siècle
+XIXe siècle
+fin_question
+difficile
+VF
+Michael Faraday est un scientifique americain ? 
+false
+fin_question
+moyen
+QCM
+Par quel moyen était propulsée la première voiture ?
+Vapeur
+Essence
+Huile
+Vapeur
+fin_question
+facile
+VF
+Karl Benz a été le premier à construire une voiture à moteur. 
+true
+fin_question
+difficile
+QCM
+Qui a découvert la théorie de relativité ? 
+Einstein
+Archimede
+Platon
+Einstein
+fin_question
+moyen
+VF
+La roue a été inventée il y a 3 000 ans.
+true
+fin_question
+difficile
+RC
+La nature de quel phénomène Michael Faraday a-t-il permis de mieux comprendre ? 
+L'électricité et le magnétisme
+fin_question
+moyen
+QCM
+L'inventeur de la première voiture, Nicolas Cugnot, était de nationalité...
+Francaise
+Allemande
+Anglaise
+Francaise
+fin_question
+facile
+QCM
+Sous quelles initiales est mieux connu l'acide désoxyribonucléique ?
+ADB
+ADR
+ADN
+ADN
+fin_question
+facile
+VF
+L'origine des espèces est un ouvrage traitant de l'évolution et écrit par Jean-Baptiste de Lamarck.
+false
+fin_question
+facile
+VF
+L'année-lumière est une unité mesurant uniquement le temps.
+false
+fin_question
+moyen
+VF
+Dans la célèbre formule E=mc2, c représente la vitesse de la lumière.
+true
+fin_question
+facile
+VF
+Australopithecus afarensis est une espèce éteinte plus connue sous le nom de Lucy. 
+true
+fin_question
+difficile
+VF
+L'écholocalisation est utilisée uniquement par les mammifères du type Cétacés, comme le dauphin.
+false
+fin_question
+difficile
+VF
+L'Amanite printanière est un champignon comestible.
+false
+fin_question
+difficile
+VF
+En 2007, lors d'essais, le TGV a effectué une pointe à 574, 8 km/h. 
+true
+fin_question
+moyen
+VF
+Les étoiles que l'on observe dans le ciel, une belle nuit d'été, sont immobiles. Ceci est normal, elles brillent éternellement.
+false
+fin_question
+facile
+VF
+Titan, dont le diamètre est proche de celui de Mars, est un des 53 satellites de Saturne.
+true
+fin_question
+difficile
+VF
+Le glucose et le fructose ont la même formule chimique soit C6H12O6.
+true
+fin_question
+difficile
+RC
+Il a fait des recherches sur les bactéries du ver à soie, le choléra de la poule mais il est célèbre pour son vaccin contre la rage. 
+Louis Pasteur
+fin_question
+facile
+RC
+Il vivait 400 ans avant Jésus-Christ et c'est le père de la médecine.
+Hippocrate
+fin_question
+facile
+RC
+Antoine de Lavoisier (1743-1794) a démontré le rôle de l'oxygène et la conservation de la matière : Rien ne se crée, tout se transforme . Comment est-il mort ?
+Guillotiné
+fin_question
+moyen
+RC
+Isaac Newton (1643-1727) a effectué des travaux sur la gravitation universelle qui ont fait passer son nom à la postérité. Il a même l'honneur d'être enterré...
+Dans l'abbaye de Westminster
+fin_question
+moyen
+RC
+Qu'a découvert Wilhelm Röntgen (1845-1923) ?
+Les rayons X
+fin_question
+moyen
+RC
+Il a déterminé la vitesse de la lumière et mis au point le gyroscope mais il doit sa célébrité à sa démonstration de la rotation de la Terre grâce à un énorme pendule.
+Léon Foucault (1819-1868)
+fin_question
+difficile
+RC
+Ce chimiste a travaillé sur la classification périodique des éléments.
+Dimitri Mendeleiev
+fin_question
+facile
+RC
+Qu'a mis au point Carl von Linné (1707-1778) ?
+Un nom latin pour toute espèce vivante
+fin_question
+facile
+RC
+Quel scientifique a été ministre de la Guerre et de la Marine sous la IIe République ? 
+François Arago
+fin_question
+moyen
+RC
+Qui a donné son nom à l'unité d'intensité d'un courant électrique ?
+André Ampère
+fin_question
+moyen
+RC
+Ce franc-maçon a participé à la rédaction de la Déclaration d'Indépendance des USA et nous a laissé le paratonnerre.
+Benjamin Franklin
+fin_question
+difficile
+RC
+Il a expliqué l'évolution par la sélection naturelle des espèces.
+Charles Darwin
+fin_question

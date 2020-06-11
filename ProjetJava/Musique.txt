@@ -1,0 +1,54 @@
+facile
+QCM
+Qui est la chanteuse de Empire States of Mind ?
+Alicia Keys
+Marthe Benoit
+Adele
+Alicia Keys
+fin_question
+moyen
+QCM
+Qui chante No me mirès màs ?
+Math Pokora
+Kendji Girac
+Mc Solar
+Kendji Girac
+fin_question
+difficile
+QCM
+Qui est l'auteur(e) de La foule ? 
+Patric Sébastien
+Claude François
+Edith Piaf
+Edith Piaf
+fin_question
+difficile
+VF
+Stevie Nicks est la première femme à avoir été intronisée au Rock and Roll Hall of fame.
+false
+fin_question
+moyen
+VF
+Frank Zappa s'est presque présenté à la présidence des États-Unis.
+true
+fin_question
+facile
+VF
+Malgré sa très brève carrière, Buddy Holly a accumulé plus d'une vingtaine de numéro 1.
+false
+fin_question
+facile
+RC
+Qui a chanté Balance ton quoi ?
+Angèle
+fin_question
+moyen
+RC
+Le dernier titre des BTS est : 
+ON
+fin_question
+difficile
+RC
+Quel chanteur chante Pookie ? 
+Aya Nakamura
+fin_question

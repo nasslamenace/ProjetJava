@@ -1,0 +1,174 @@
+facile
+QCM
+Les mitochondries :
+Ont une membrane interne sous forme de crêtes
+Contrôlent l'activité cellulaire
+Synthétisent les protéines
+Ont une membrane interne sous forme de crêtes
+fin_question
+facile
+QCM
+Les eucaryotes :
+Ont un noyau non organisé
+   Biologie cellulaire QCM créé par kath12 le 10 Fév. 2017, validé par Besanthile  Sciences  Biologie  Cellules  Niveau difficile (51% de réussite)    7 questions - 1 828 joueurs J'espère que ça vous aidera : )    Quizz QCM : une ou plusieurs bonnes réponses par question   	14% de bonnes réponses en 11s  (1/7) " J'en ai gros sur la patate "  Quizz.biz est financé par la publicité, celle-ci permet de vous offrir du contenu gratuitement. Merci de désactiver votre Adblock, ou de voir comment nous aider en nous contactant à julien@quizz.biz  Quizz.biz est financé par la publicité, celle-ci permet de vous offrir du contenu gratuitement. Merci de désactiver votre Adblock, ou de voir comment nous aider en nous contactant à julien@quizz.biz  Voici les réponses 1  Mauvaise reponse Les mitochondries : Synthétisent les protéines Produisent de l'énergie Contrôlent l'activité cellulaire Ont une membrane interne sous forme de crêtes 2  Mauvaise reponse Les eucaryotes : Ont un noyau, mitochondries, REL, REG, appareil de Golgi et lysosomes
+ Ont de faibles dimensions
+   Biologie cellulaire QCM créé par kath12 le 10 Fév. 2017, validé par Besanthile  Sciences  Biologie  Cellules  Niveau difficile (51% de réussite)    7 questions - 1 828 joueurs J'espère que ça vous aidera : )    Quizz QCM : une ou plusieurs bonnes réponses par question   	14% de bonnes réponses en 11s  (1/7) " J'en ai gros sur la patate "  Quizz.biz est financé par la publicité, celle-ci permet de vous offrir du contenu gratuitement. Merci de désactiver votre Adblock, ou de voir comment nous aider en nous contactant à julien@quizz.biz  Quizz.biz est financé par la publicité, celle-ci permet de vous offrir du contenu gratuitement. Merci de désactiver votre Adblock, ou de voir comment nous aider en nous contactant à julien@quizz.biz  Voici les réponses 1  Mauvaise reponse Les mitochondries : Synthétisent les protéines Produisent de l'énergie Contrôlent l'activité cellulaire Ont une membrane interne sous forme de crêtes 2  Mauvaise reponse Les eucaryotes : Ont un noyau, mitochondries, REL, REG, appareil de Golgi et lysosomes
+fin_question
+facile
+QCM
+Les mycètes sont :
+Des champignons
+Des bactéries
+Des cellules procaryotes autotrophes
+Des champignons
+fin_question
+moyen
+QCM
+Où se trouve l'ADN ?
+Dans le sang
+Dans le muscle cardiaque
+Dans le noyau d'une cellule
+Dans le noyau d'une cellule
+fin_question
+moyen
+QCM
+Notre bagage génétique est inclu dans des bâtonnets appelés :
+Ribosomes
+Cytoplasmes
+Centrosomes
+Centrosomes
+fin_question
+moyen
+QCM
+Quel matériel biologique liquide est compris entre la membrane nucléaire et plasmique ?
+Le noyau
+L'appareil de Golgi
+Le cytoplasme
+Le cytoplasme
+fin_question
+difficile
+QCM
+Quels sont les composés organiques les plus abondants chez les êtres vivants ?
+Os
+Muscles
+Muqueuse
+Muqueuse
+fin_question
+difficile
+QCM
+Quel matériel biologique liquide est compris entre la membrane nucléaire et plasmique ?
+L'appareil de Golgi
+Le cytoplasme
+Le réticulum endoplasmique
+Le cytoplasme
+fin_question
+facile
+VF
+L'acide nucléique de certains virus est constitué d'ARN uniquement :
+true
+fin_question
+facile
+VF
+Les protozoaires sont tous des parasites :
+false
+fin_question
+facile
+VF
+Les virus qui s'attaquent aux végétaux ou aux bactéries sont incapables d'infecter les humains :
+true
+fin_question
+moyen
+VF
+Le terme transduction signifie la transmission indirecte de gènes d'une bactérie à une autre par l'intermédiaire d'un phage :
+true
+fin_question
+moyen
+VF
+Les virus peuvent altérer les aliments lorsqu'ils sont trop abondants :
+false
+fin_question
+moyen
+VF
+Un aliment parfaitement stérilisé ne peut pas provoquer de TIA (toxi-infection alimentaire) :
+false
+fin_question
+moyen
+VF
+Les virus sont si petits qu'ils ne sont pas visibles au microscope optique :
+true
+fin_question
+moyen
+VF
+Les moisissures sont toutes aérobies strictes :
+true
+fin_question
+moyen
+VF
+La paroi des bactéries contient du peptidoglycane (polymère complexe, formé de sucres aminés et d'acides aminés) :
+true
+fin_question
+moyen
+VF
+La congélation élimine tous les micro-organismes présents sur un aliment :
+false
+fin_question
+difficile
+VF
+La paroi des bactéries contient du peptidoglycane (polymère complexe, formé de sucres aminés et d'acides aminés) :
+true
+fin_question
+difficile
+VF
+Les virus sont si petits qu'ils ne sont pas visibles au microscope optique :
+true
+fin_question
+difficile
+VF
+Un aliment parfaitement stérilisé ne peut pas provoquer de TIA (toxi-infection alimentaire) :
+true
+fin_question
+facile
+RC
+Les mitochondries :
+Produisent de l'énergie
+fin_question
+facile
+RC
+Les eucaryotes :
+Ont un cytosquelette formé de microfilaments et de microtubules
+fin_question
+facile
+RC
+Les mycètes sont :
+Des cellules eucaryotes
+fin_question
+moyen
+RC
+Où se trouve l'ADN ?
+Dans le noyau d'une cellule
+fin_question
+moyen
+RC
+Notre bagage génétique est inclu dans des bâtonnets appelés :
+Chromosomes
+fin_question
+moyen
+RC
+Quel matériel biologique liquide est compris entre la membrane nucléaire et plasmique ?
+Le cytoplasme
+fin_question
+difficile
+RC
+Quels sont les composés organiques les plus abondants chez les êtres vivants ?
+Protéines
+fin_question
+difficile
+RC
+Notre bagage génétique est inclu dans des bâtonnets appelés :
+  Ribosomes
+fin_question
+difficile
+RC
+Les mitochondries :
+Ont une membrane interne sous forme de crêtes
+fin_question

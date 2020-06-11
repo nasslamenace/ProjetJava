@@ -107,13 +107,6 @@ public class Joueur extends Thread implements Comparable{
 		return chosenThemes;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 	public int getNumero() {
 		return numero;
 	}

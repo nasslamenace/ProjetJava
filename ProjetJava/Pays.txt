@@ -1,0 +1,167 @@
+facile
+QCM
+Quel est le pays encore appelé l'hexagone ?
+France
+Angleterre
+Espagne
+France
+fin_question
+facile
+QCM
+Quel est le pays ayant la plus grande superficie au monde?
+Le Canada
+La Russie
+La Chine
+La Russie
+fin_question
+facile
+QCM
+En allemagne qui dirige l'Etat? 
+Le Premier Ministre
+Le President
+La Chanceliere
+La Chanceliere
+fin_question
+moyen
+QCM
+Quelle est la premiere puissance economique d'europe?
+Allemagne
+France
+Italie
+Allemagne
+fin_question
+moyen
+QCM
+Quel pays au monde a le plus grand nombre d'habitants?
+Russie
+Chine
+Inde
+Chine
+fin_question
+moyen
+QCM
+Dans quel pays est cultivé le meilleur poivre blanc du monde?
+Rome
+Le Cameroun
+Somalie
+Le Cameroun
+fin_question
+difficile
+QCM
+Maitre Gims est de quelle nationalité?
+Tunisien
+Nigerien
+Congolais
+Congolais
+fin_question
+difficile
+QCM
+Dans quel pays se situe la ville d'Istanbul ? 
+Turquie
+Tunisie
+Maroc
+Turquie
+fin_question
+difficile
+QCM
+Sur quel continent le Japon se situe-t-il ?
+Asie
+Amérique
+Europe
+Asie
+fin_question
+facile
+VF
+La ville Memphis se trouve dans l'Etat du Tennessee aux Etats-Unis.
+false
+fin_question
+facile
+VF
+La statue de la liberté se trouve à New York.
+true
+fin_question
+facile
+VF
+le palais de L'élysée se trouve à marseille.
+false
+fin_question
+moyen
+VF
+Jakarta est la capitale du cuba.
+false
+fin_question
+moyen
+VF
+la statue du christ redempteur se trouve dans la ville de rio de janeiro au bresil
+true
+fin_question
+moyen
+VF
+Bangui est la capitale de la republique centrafricaine.
+true
+fin_question
+moyen
+VF
+la place rouge se trouve à Kazan.
+false
+fin_question
+difficile
+VF
+le mont Kilimandjaro se trouve au tchad.
+false
+fin_question
+difficile
+VF
+L’anglais est la langue maternelle la plus parlée dans l’Union européenne.
+true
+fin_question
+difficile
+VF
+Le Burj Khalifa, l’édifice le plus haut du monde, se trouve à Abu Dhabi.
+false
+fin_question
+facile
+RC
+Kuala Lumpur est la capitale de 
+la Malaisie
+fin_question
+facile
+RC
+Encore appelé le pays des belles filles, le pays dans lequel s'est joué la coupe du monde de football 2014.
+le bresil
+fin_question
+facile
+RC
+Les Etats asiatiques considérés économiquement comme les « 4 dragons ».
+Corée du Sud, Hong Kong, Singapour et Taïwan.
+fin_question
+moyen
+RC
+Le continent qui a la plus grande superficie au monde.
+L'Asie
+fin_question
+moyen
+RC
+Quelle est la capitale de la Mauritanie ?
+Nouakchott
+fin_question
+moyen
+RC
+Quel est le plus petit État du monde ?
+Le Vatican
+fin_question
+difficile
+RC
+Le continent qui a la plus grande superficie au monde.
+L'Asie
+fin_question
+difficile
+RC
+Le continent qui a la plus grande population au monde.
+L'asie
+fin_question
+difficile
+RC
+Le continent qui a la plus grande économie au monde.
+Europe
+fin_question

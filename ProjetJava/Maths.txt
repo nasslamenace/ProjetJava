@@ -1,0 +1,172 @@
+facile
+RC
+Quel est le chiffre positif dont le carre donne 4?
+2
+fin_question
+facile
+RC
+4+4 ?
+8
+fin_question
+facile
+QCM
+Comment appel-t-on le plus long cote d'un triangle rectangle?
+L'hypotenuse
+Adjacent
+Opposé
+L'hypotenuse
+fin_question
+facile
+QCM
+Quel est le carré du quart du tiers de 12 ?
+1
+2
+3
+1
+fin_question
+facile
+QCM
+Une carte routière est à l'échelle 1/250 000. Quelle distance réelle représentent 4 cm sur cette carte ?
+10km
+5km
+2km
+10km
+fin_question
+facile
+QCM
+12 000 secondes sont égales à ?
+3h20
+1h40
+3h8
+3h20
+fin_question
+moyen
+QCM
+Qui est le plus rapide : un athlète courant le 100 mètres en 10 secondes ou un cycliste roulant à 36 km/h ?
+Athlete
+Cycliste
+Ils sont aussi rapides l'un de l'autre
+Ils sont aussi rapides l'un de l'autre
+fin_question
+moyen
+QCM
+Quels chiffres manquent dans la liste suivante : 15, 4, 14, 8, 11, 12, 9, ?, ?, 20, 5 ?
+16 et 7
+15 et 8
+29 et 9
+16 et 7
+fin_question
+difficile
+QCM
+Quelle est l'égalité de (a+b)² - (a-b)² ?
+4ab
+6ab
+8ab
+4ab
+fin_question
+difficile
+QCM
+Comment calcule-t-on le périmètre d'un cercle de rayon R ?
+2(3.14*B)
+2(3.14*R)
+(3.14*R)
+2(3.14*B)
+fin_question
+difficile
+QCM
+Dans un triangle rectangle, le carré de l'hypoténuse est égal a?
+la somme des carres des cotes qui formes le coté opposé
+10
+la somme des carres des cotes qui formes l'angle droit.
+la somme des carres des cotes qui formes l'angle droit.
+fin_question
+facile
+VF
+L'expression (9 - x²) est égale à (x-3)(x+3).
+false
+fin_question
+facile
+VF
+L'expression (3x - 1)² + 3(1 - 3x) (x + 2) a pour résultat 6x + 3.
+false
+fin_question
+facile
+VF
+Le centre de gravité d'un triangle est le point de concours des Medianes.
+true
+fin_question
+moyen
+VF
+Une table ronde a une aire de 1,33 m². Le rayon, en cm, de cette table est 7.
+false
+fin_question
+moyen
+VF
+Émile a 32 ans. Dans 40 années, son âge sera un carré pour la troisième fois.
+false
+fin_question
+moyen
+VF
+zero est le plus petit nombre qui est formé de 4 lettres.
+false
+fin_question
+difficile
+VF
+10 est la base de notre système de numération. 
+true
+fin_question
+difficile
+VF
+16 est la base de notre système de numération. 
+false
+fin_question
+difficile
+VF
+8 est la base de notre système de numération. 
+false
+fin_question
+facile
+RC
+Une sphère et un cylindre ont tous deux un rayon de 6 cm. Quelle doit être la hauteur du cylindre pour qu'ils aient le même volume ?
+6cm
+fin_question
+facile
+RC
+Si on double le rayon d'une boule, son volume est multiplié par :
+huit
+fin_question
+facile
+RC
+Une maison de 10 m sur 10 m est construite sur un terrain rectangulaire de 20 m sur 30 m. La surface de terrain non occupée par la maison est de:
+500 m2
+fin_question
+moyen
+RC
+Un triangle ABC a un angle de 50°, un deuxième angle de 80°. Ce triangle ABC est :
+isocèle
+fin_question
+moyen
+RC
+Quand on augmente de 7 m les longueurs des côtés d'un carré, son aire augmente de 511 m². Quelle est la longueur du côté du carré primitif ?
+33 m
+fin_question
+moyen
+RC
+Vous écrivez TRENTE à la suite. Combien de lettres avez-vous écrites avant d’écrire le septième E ?
+4 lettres
+fin_question
+difficile
+RC
+Quel est le plus grand nombre divisible par 4 avant 159 ?
+156
+fin_question
+difficile
+RC
+16/3 ?
+5.33
+fin_question
+difficile
+RC
+89/5
+17.8
+fin_question

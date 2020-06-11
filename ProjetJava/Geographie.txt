@@ -1,0 +1,188 @@
+facile
+QCM
+Laquelle de ces villes n'est pas une capitale ?
+Lisbonne
+Almaty
+Rome
+Almaty
+fin_question
+facile
+QCM
+Quelle langue parle-t-on au Chili ?
+Espagnol
+Portugais
+Mexicain
+Espagnol
+fin_question
+facile
+QCM
+Quelle est la capitale du Portugal ?
+Faro
+Porto
+Lisbonne
+Lisbonne
+fin_question
+facile
+QCM
+De quel pays l'ouguiya est-elle la monnaie ?
+Géorgie
+Mauritanie
+Inde
+Mauritanie
+fin_question
+moyen
+QCM
+Quel océan borde La Réunion ? 
+L'océan Indien
+L'océan Pacifique
+L'océan Atlantique
+L'océan Indien
+fin_question
+moyen
+QCM
+Sur quel continent se situe le Sri Lanka ? 
+En Europe
+En Afrique
+En Asie
+En Asie
+fin_question
+moyen
+QCM
+Quel est le plus long fleuve français ?
+Le Rhone
+Le Rhin
+La Seine
+Le Rhin
+fin_question
+difficile
+QCM
+Savez-vous quelle est la capitale constitutionnelle de la Bolivie ?
+Sucre
+Canelle
+Sel
+Sucre
+fin_question
+difficile
+QCM
+De quel pays le Pérou est-il devenu indépendant le 28 juillet 1821 ?
+L'Espagne
+Le Portugal
+L'Italie
+L'Espagne
+fin_question
+difficile
+QCM
+C'est l'une des villes d'Amérique latine les plus touchées par la pollution atmosphérique.
+New York
+San Diego
+San Francisco
+San Francisco
+fin_question
+difficile
+QCM
+Où se situe Fortaleza ?
+Brésil
+Portugal
+Espagne
+Brésil
+fin_question
+facile
+VF
+La Mosquée bleue a été la deuxième mosquée du monde, après celle de la Mecque, à posséder six minarets.
+true
+fin_question
+facile
+VF
+Louis II de Bavière a fait dynamiter un pan de montagne pour construire son château sur un éperon rocheux de 200 mètres.
+true
+fin_question
+facile
+VF
+Pour éviter leur destruction, les monuments de Nubie d’Abou Simbel ont été entièrement déplacés.
+true
+fin_question
+moyen
+VF
+New York, la capitale de l’État de New York, a été fondée en 1624.
+false
+fin_question
+moyen
+VF
+À l’origine, la route 66 reliait New York à la Californie.
+false
+fin_question
+moyen
+VF
+Le premier voyage touristique dans l’espace a eu lieu en 2001.
+true
+fin_question
+difficile
+VF
+C’est en Égypte que l’on trouve le plus grand nombre de pyramides.
+false
+fin_question
+difficile
+VF
+Le musée de cire Madame Tussauds, à Londres, a fêté son 100ᵉ anniversaire en 2015.
+false
+fin_question
+difficile
+VF
+Venise est constituée de trois îles. 
+false
+fin_question
+difficile
+VF
+La plus courte liaison aérienne commerciale dure 2 minutes.
+true
+fin_question
+facile
+RC
+Quelle est la couleur du rond se trouvant au centre du drapeau du Japon ?
+Rouge
+fin_question
+facile
+RC
+Comment appelle-t-on les habitants de la ville de Reims ?
+Rémois
+fin_question
+facile
+RC
+En quelle année l'Inde est-il devenu indépendant ?
+1947
+fin_question
+moyen
+RC
+De combien de départements est composé la région Nouvelle-Aquitaine ?
+12
+fin_question
+moyen
+RC
+Où se situe le pont Banpo ?
+Corée du Sud
+fin_question
+moyen
+RC
+En quelle année l'Autriche a adhéré à l'Union Européenne ?
+1995
+fin_question
+difficile
+RC
+Quelle est la capitale de la Birmanie ?
+Naypyidaw
+fin_question
+difficile
+RC
+Dans quelle province canadienne se trouve la ville de Toronto ?
+Ontario
+fin_question
+difficile
+RC
+Sur quel continent se trouve la Somalie ?
+Afrique
+fin_question
+difficile
+RC
+Dans quel pays se situe le lac de Côme ?
+Italie
+fin_question

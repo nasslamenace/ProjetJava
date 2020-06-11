@@ -1,0 +1,260 @@
+facile
+QCM
+Quelle pièce est absolument à protéger dans un jeu d’échec ?
+Roi
+Reine
+Tour
+Roi
+fin_question
+facile
+QCM
+Comment se nomme l'hymne français ?
+La Marseillaise
+L'Olympiade
+La Parisienne
+La Marseillaise
+fin_question
+facile
+QCM
+Comment s'appelle le pape ?
+Gilles
+Francois
+Jean
+Francois
+fin_question
+facile
+QCM
+Comment s'appelle le Président français actuel ?
+Sarkozy
+Le Pen
+Macron
+Macron
+fin_question
+moyen
+QCM
+Qui a créé l'entreprise Apple ?
+Steve Jobs
+Bill Gates
+Elon Musk
+Steve Jobs
+fin_question
+moyen
+QCM
+Combien de membres compte les Tortues Ninja ?
+3
+5
+4
+4
+fin_question
+moyen
+QCM
+Dans quel pays se trouve la Catalogne ?
+Portugal
+Espagne
+Italie
+Espagne
+fin_question
+moyen
+QCM
+Quel pays a remporté la coupe du monde de football en 2014 ?
+France
+Espagne
+Allemagne
+Allemagne
+fin_question
+moyen
+QCM
+De quel pays est originaire W. Sakespeare ?
+Angleterre
+Etats-Unis
+Australie
+Angleterre
+fin_question
+moyen
+QCM
+Quel est la célèbre formule d' Albert Einstein ?
+E=mc^2
+E=mc
+Em=c^2
+E=mc^2
+fin_question
+difficile
+QCM
+Combien y a-t-il de signes astrologiques chinois ?
+5
+7
+12
+12
+fin_question
+difficile
+QCM
+En quelle année est mort JFK ?
+1968
+1978
+1963
+1963
+fin_question
+difficile
+QCM
+De combien de syllabes est composé un alexandrin ?
+6
+12
+9
+12
+fin_question
+difficile
+QCM
+Qui a fondé l'Académie Française ?
+Richelieu
+Mazardin
+Napoléon
+Richelieu
+fin_question
+difficile
+QCM
+Quelle ville a construit le premier métro ?
+Rome
+Londres
+Lisbonne
+Londres
+fin_question
+facile
+VF
+Sophie Davant a co-animé "Fort Boyard" avec Patrice Laffont dans les années 90.
+true
+fin_question
+facile
+VF
+Camille Desmoulins a vécu au XVIIe siècle.
+false
+fin_question
+facile
+VF
+Dans la famille Addams, la fille s'appelle Mercredi.
+true
+fin_question
+facile
+VF
+La France a gagné la Coupe du monde de foot féminine en 2019.
+false
+fin_question
+moyen
+VF
+La région de la Catalogne se trouve en Italie.
+false
+fin_question
+moyen
+VF
+L'acteur qui incarne Harry Potter dans la saga cinématographique du même nom est Daniel Radcliffe.
+true
+fin_question
+moyen
+VF
+Le mois de mars se dit "march" en anglais.
+true
+fin_question
+moyen
+VF
+Le tableau "La Nuit étoilée" a été peint par Vincent van Gogh.
+true
+fin_question
+moyen
+VF
+Le Costa Rica est un pays se trouvant en Afrique.
+false
+fin_question
+difficile
+VF
+Le « Concorde » est le premier avion supersonique civil à avoir volé !
+false
+fin_question
+difficile
+VF
+Le « Blue Lady » est un des noms que porta un navire nommé « France » construit en 1890.
+false
+fin_question
+difficile
+VF
+« Mau » signifie « chat » et « nuit » dans l'ancienne langue de l'Egypte pharaonique.
+false
+fin_question
+difficile
+VF
+Le « pont de Millau » possède une pile/pylône qui dépasse la hauteur de la tour Eiffel de 19 mètres !
+true
+fin_question
+difficile
+VF
+Pythagore aurait participé aux jeux Olympiques antiques dans l'épreuve du pugilat
+true
+fin_question
+difficile
+VF
+La première coupe du monde de football s'est déroulée en Uruguay et c'est l'Argentine qui gagna la compétition.
+false
+fin_question
+facile
+RC
+Qui chantait Envole-moi ?
+Jean-Jacques Goldman
+fin_question
+facile
+RC
+Qui a écrit Vol de Nuit ?
+Antoine de Saint-Exupéry
+fin_question
+facile
+RC
+Hommage à Saint-Exupéry disparu en vol en 1944 : où ont été retrouvés les débris de son avion en 2000 ? 
+Marseille
+fin_question
+facile
+RC
+Qui chantait Je vole?
+Michel Sardou
+fin_question
+moyen
+RC
+Dans une fable de La Fontaine, avec qui la tortue s'envole-t-elle ?
+Deux canards
+fin_question
+moyen
+RC
+Dans un conte célèbre qui s'envole avec une hirondelle ?
+Poucette
+fin_question
+moyen
+RC
+Dans un bon vieux proverbe, qu'est-ce qui s'envole ?
+Les paroles
+fin_question
+moyen
+RC
+Quelles planètes du Système solaire n'ont aucun satellite naturel en 2020 ?
+Mercure et Vénus
+fin_question
+difficile
+RC
+Dans quel édifice religieux parisien a été célébrée la traditionnelle messe du Vendredi saint, le 10 avril 2020 ?
+Notre-Dame de Paris
+fin_question
+difficile
+RC
+La Nouvelle-Écosse est une province...
+Du Canada
+fin_question
+difficile
+RC
+Quel est le premier livre de la Bible ?
+La Genèse
+fin_question
+difficile
+RC
+Qui a peint la fresque du plafond de la chapelle Sixtine du Vatican ?
+Michel-Ange
+fin_question
+difficile
+RC
+La boisson japonaise, saké, est...
+Un alcool de riz
+fin_question
