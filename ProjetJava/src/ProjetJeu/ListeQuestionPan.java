@@ -95,6 +95,8 @@ public class ListeQuestionPan extends MyPanel {
 				container.add(niveaux, BorderLayout.NORTH);
 				switch((Niveau)niveaux.getSelectedItem()) {
 				case facile:
+					
+					
 					container.add(new JScrollPane(facileQuestionTable), BorderLayout.CENTER);
 					break;
 				case moyen:

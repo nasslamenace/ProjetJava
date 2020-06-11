@@ -33,7 +33,7 @@ public class Phase1 extends MyPanel implements Phase {
 		compteurJoueur = 0;
 		//selectionnerJoueurs();
 		//phaseDeJeu();
-	 
+		
 	}
 	
 

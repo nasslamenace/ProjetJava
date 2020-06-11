@@ -40,6 +40,9 @@ public class ListeQuestions {
 		this.questions = mesQuestions;*/
 		
 		this.questions = FileManager.retrieveQuestions(theme);
+		
+		
+		
 		this.theme = theme;
 	}
 	

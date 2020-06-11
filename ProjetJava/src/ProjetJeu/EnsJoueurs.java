@@ -1,5 +1,8 @@
 package ProjetJeu;
 
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -9,12 +12,21 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+
+import ProjetJeu.ListeQuestionPan.JTableButtonMouseListener;
+import ProjetJeu.ListeQuestionPan.TableComponent;
 
 public class EnsJoueurs {
+	
 	
 
 	
 	private static ArrayList<Joueur> joueurs = creer();
+	
+	private static JoueursTableModel joueursModel;
 	
 	
 	public EnsJoueurs() {
@@ -24,12 +36,12 @@ public class EnsJoueurs {
 	private static ArrayList<Joueur> creer() {
 		
 		
-		ArrayList<Joueur> joueurs = new ArrayList<Joueur>();
+		ArrayList<Joueur> joueurs = FileManager.retrieveJoueurs();
 		
-		for(int i = 0; i < 20; i++) 
-			joueurs.add(new Joueur(Character.toString((char) (i + 65))));
-		
-		
+		if(joueurs.isEmpty()) {
+			for(int i = 0; i < 20; i++) 
+				joueurs.add(new Joueur(Character.toString((char) (i + 65))));
+		}
 		return joueurs;
 	}
 	
@@ -41,6 +53,16 @@ public class EnsJoueurs {
 		MyPanel container = new MyPanel();
 		
 		container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
+		joueursModel = new JoueursTableModel(joueurs);
+		
+		MyTable joueursTable = new MyTable(joueursModel);
+		joueursTable.setCellSelectionEnabled(false);
+ 
+        joueursTable.setFillsViewportHeight(true);	
+		MyTable.applyDesign(joueursTable);
+		
+
+		joueursTable.addMouseListener(new JTableButtonMouseListener(joueursTable));
 		
 		
 		container.add(new MyLabel("Liste des joueurs"));
@@ -53,7 +75,7 @@ public class EnsJoueurs {
 		
 		
 		
-		container.add(new JList(liste));
+		container.add(new JScrollPane(joueursTable));
 		
 		return container;
 		
@@ -61,7 +83,8 @@ public class EnsJoueurs {
 	
 	public static void reinitialiserEtat() {
 		for(int i = 0; i < joueurs.size(); i++) {
-			joueurs.get(i).changerEtat(Etat.enAttente);
+			if(joueurs.get(i).getEtat() != Etat.elimine)
+				joueurs.get(i).changerEtat(Etat.enAttente);
 			joueurs.get(i).setScore(0);
 			joueurs.get(i).resetTimer();
 			//System.out.println(joueurs.get(i).getEtat());
@@ -125,6 +148,39 @@ public class EnsJoueurs {
 
 		
 	}
+	
+    public static class TableComponent extends DefaultTableCellRenderer {
+
+  	  public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+  	    //Si la valeur de la cellule est un MyButton, on transtype cette valeur
+  	    if (value instanceof MyButton)
+  	      return (MyButton) value;
+  	    else
+  	      return this;
+  	  }
+  	}
+	
+	  public static class JTableButtonMouseListener extends MouseAdapter {
+		  private final JTable table;
+				
+		  public JTableButtonMouseListener(JTable table) {
+		    this.table = table;
+		  }
+
+		  @Override public void mouseClicked(MouseEvent e) {
+		    int column = table.getColumnModel().getColumnIndexAtX(e.getX());
+		    int row    = e.getY()/table.getRowHeight(); 
+
+		    if (row < table.getRowCount() && row >= 0 && column < table.getColumnCount() && column >= 0) {
+		      Object value = table.getValueAt(row, column);
+		      if (value instanceof MyButton) {
+		        ((MyButton)value).doClick();
+		      }
+		    }
+		  }
+		}
+	
+
 
 	
 }

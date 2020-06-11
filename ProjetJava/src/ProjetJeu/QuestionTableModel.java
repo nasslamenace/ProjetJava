@@ -76,7 +76,7 @@ public class QuestionTableModel extends AbstractTableModel {
 	 public Object getValueAt(int rowIndex, int columnIndex) {
         switch(columnIndex){
             case 0:
-                return questionsList.get(rowIndex).getEnonce().question;
+                return questionsList.get(rowIndex).getEnonce().getQuestion();
             case 1:
                 return questionsList.get(rowIndex).getEnonce().getReponse();
             case 2:
@@ -119,11 +119,5 @@ public class QuestionTableModel extends AbstractTableModel {
 
         fireTableRowsDeleted(rowIndex, rowIndex);
     }
-    
-
-
-    
-
-
 }
 

@@ -129,6 +129,65 @@ public class FileManager {
 		return questionsList;
 
 	}
+	
+	public static ArrayList<Joueur> retrieveJoueurs(){
+
+
+		BufferedReader reader;
+
+		String buffer = "";
+
+
+		ArrayList<Joueur> joueurs = new ArrayList<Joueur>();
+		
+
+
+		try {
+
+			reader = new BufferedReader(new FileReader("Joueurs.txt"));
+			
+			
+			buffer = reader.readLine();
+			
+			while(buffer != null){
+				joueurs.add(new Joueur(buffer));
+				buffer = reader.readLine();
+			}
+
+			reader.close();
+		} catch (IOException e) {
+			return joueurs;
+		}
+
+		return joueurs;
+
+	}
+	
+	public static void updatePlayers(ArrayList<Joueur> joueurs) {
+		OutputStreamWriter osw = null;
+		FileOutputStream is = null;
+
+		try {
+
+			File file = new File("Joueurs.txt");
+			is = new FileOutputStream(file);
+			osw = new OutputStreamWriter(is);
+			Writer w = new BufferedWriter(osw);
+
+
+			for (int i = 0; i < joueurs.size(); i++) {
+				
+				w.write(joueurs.get(i).getNom());
+				w.write("\n");
+			}
+			w.close();
+		} catch (IOException e) {
+			System.err.println("Il y a un probleme dans l'ecriture de fichiers");
+		}
+	}
+
+		
+	
 
 
 

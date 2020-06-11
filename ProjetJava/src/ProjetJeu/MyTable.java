@@ -21,6 +21,8 @@ public class MyTable extends JTable {
   	  this.getTableHeader().setBackground(Color.white);
   	  this.getTableHeader().setForeground(new Color(61, 97, 166));
   	  this.getTableHeader().setFont(new Font("ChalkBoard", Font.ITALIC, 15));
+  	  this.getColumnModel().getColumn(0).setPreferredWidth(80);
+  	  this.setSize(this.getHeight(), 500);
 		
 	}
 
@@ -37,6 +39,7 @@ public class MyTable extends JTable {
 	  	this.getTableHeader().setBackground(new Color(61, 97, 166));
 	  	this.getTableHeader().setForeground(Color.white);
 	  	this.getTableHeader().setFont(new Font("ChalkBoard", Font.ITALIC, 15));
+	  	this.setSize(this.getHeight(), 500);
 	}
 	
 	static void applyDesign( JTable table) {
@@ -51,6 +54,7 @@ public class MyTable extends JTable {
 		table.getTableHeader().setBackground(new Color(61, 97, 166));
 		table.getTableHeader().setForeground(Color.white);
 	  	table.getTableHeader().setFont(new Font("ChalkBoard", Font.ITALIC, 15));
+	  	table.setSize(table.getHeight(), 500);
 		
 		
 	}
