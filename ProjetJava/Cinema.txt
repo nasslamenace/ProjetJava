@@ -1,0 +1,162 @@
+facile
+QCM
+Dans 'Toy Story', quel est le nom du chien à ressorts ? 
+Zigzag
+Blabla
+BeepBeep
+Zigzag
+fin_question
+facile
+QCM
+Si je vous dis : 'Toujours au mauvais endroit au mauvais moment', vous me répondez...
+John McLaine
+John McBeth
+John McQueen
+John McLaine
+fin_question
+facile
+QCM
+'Jack, je vole !'De quel film est issue cette phrase ?
+Forest Gump
+Titanic
+Cars
+Titanic
+fin_question
+moyen
+QCM
+Comment s'appelle la voiture de Mad Max ?
+Obstructor
+Interceptor
+Destructor
+Interceptor
+fin_question
+moyen
+QCM
+Sur quelle planète vivait Anakin Skywalker lorsqu'il était enfant ?
+Tatooine
+Tatooin
+Tatoine
+Tatooine
+fin_question
+moyen
+QCM
+La 406 de Daniel est :
+Une trotinette
+Un avion
+ Un taxi
+ Un taxi
+fin_question
+difficile
+QCM
+'Le Grand Bleu' raconte l'histoire de deux apnéistes nommés...
+Bill et Enzo
+Jacques et Enzo
+Jacques et Jill
+Jacques et Enzo
+fin_question
+difficile
+QCM
+'La Momie' de 1999, est...
+Un ancien prêtre égyptien
+Un pharaon
+Une femme
+Un ancien prêtre égyptien
+fin_question
+difficile
+QCM
+Qui est Batman ? 
+Bruce Wayne
+Tony Sark
+Clark Kent
+Bruce Wayne
+fin_question
+facile
+VF
+L'Évadé d'Alcatraz est un film joué par Clint Eastwood. 
+true
+fin_question
+facile
+VF
+Intouchables est un film interprété par François Cluzet.
+true
+fin_question
+facile
+VF
+Le Pianiste est réalisé par Roman Polanski.
+true
+fin_question
+moyen
+VF
+Un homme d'exception est un long-métrage réalisé par Ron Howard.
+true
+fin_question
+moyen
+VF
+Les Survivants est le titre d'un film mis en scène par Franck Marshall.
+true
+fin_question
+moyen
+VF
+127 heures est un long-métrage réalisé par Wes Anderson.
+false
+fin_question
+difficile
+VF
+Arrête-moi si tu peux est le titre d'un film joué par Ben Stiller.
+false
+fin_question
+difficile
+VF
+La Liste de Schindler est un film réalisé par Steven Spielberg.
+true
+fin_question
+difficile
+VF
+Argo est un film mis en scène par Ben Affleck.
+true
+fin_question
+facile
+RC
+Qui est l'actrice qui joue Sarah Connor dans Terminator 2 ?
+Linda Hamilton
+fin_question
+facile
+RC
+Dans La soupe aux choux, quel est le nom de la femme du Claude qui revient à la vie par la suite ?
+Francine
+fin_question
+facile
+RC
+Quel est le nom de Dolph Lundgren dans Rocky 4 ?
+Ivan Drago
+fin_question
+moyen
+RC
+Quel nouveau avenger incarne Paul Bettany dans Avengers l'ère d'Ultron ?
+Vision
+fin_question
+moyen
+RC
+Quel le nom de Louis de Funès dans Les aventures de Rabbi Jacob ?
+Victor Pivert
+fin_question
+moyen
+RC
+Dans Je suis une légende, que fait Robert Neville ( Will Smith ) quand son chien Sam s'est fait mordre par un zombie ?
+Il le tue
+fin_question
+difficile
+RC
+Dans Rocky 3, qu'est-ce que Rocky a perdu selon Apollo Creed mais regagne par la suite ?
+L'oeil du tigre
+fin_question
+difficile
+RC
+Cendrillon - Quel est le légume qui a été transformé par la fée pour fabriquer le carrosse ?
+Une citrouille
+fin_question
+difficile
+RC
+Bienvenue chez les Ch'tis : Pourquoi Philippe (Kad Merad) va-t-il dans le Nord ?
+Il est muté
+fin_question

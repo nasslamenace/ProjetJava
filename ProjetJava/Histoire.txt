@@ -1,0 +1,167 @@
+facile
+QCM
+À la fin du XVIe siècle, qui était le principal ministre du roi Henri IV ?
+Sully
+Richelieu
+Macron
+Sully
+fin_question
+facile
+QCM
+Quel souverain français a régné lors de la monarchie de Juillet ?
+Louis-Philippe 2
+Louis-Philippe Ier
+Napoléon
+Louis-Philippe Ier
+fin_question
+facile
+QCM
+Dans l'Antiquité, quelle cité grecque a vaincu Athènes ?
+Mykonos
+Bertos
+Sparte
+Sparte
+fin_question
+moyen
+QCM
+À quel siècle a eu lieu la révolution industrielle en France ?
+19e siècle
+18e siècle
+17e siècle
+19e siècle
+fin_question
+moyen
+QCM
+Dans quel pays actuel s'est passée la bataille napoléonienne d'Austerlitz ?
+Autriche
+La République tchèque
+La Pologne
+La République tchèque
+fin_question
+moyen
+QCM
+Combien de fils de Catherine de Médicis sont-ils devenus rois au XVIe siècle ?
+3
+8
+5
+3
+fin_question
+difficile
+QCM
+Comment appelle-t-on les années qui ont suivi la Première Guerre mondiale en France ?
+Les années folles
+Les années belles
+Les années cinquante
+Les années folles
+fin_question
+difficile
+QCM
+Dans l'Antiquité, quel monument d'Alexandrie était une des Sept Merveilles du monde ?
+Un phare
+Une statue
+Un banc
+Un phare
+fin_question
+difficile
+QCM
+Comment appelait-on les empereurs de Russie jusqu'en 1917 ?
+Les Tsars
+Les Rois
+Les haut placés
+Les Tsars
+fin_question
+facile
+VF
+Inventé au Moyen Âge, le scramasaxe a été l’un des premiers instruments de navigation des marins.
+false
+fin_question
+facile
+VF
+grivna, groschen, écu et tari : ce sont toutes des monnaies utilisées pendant le Moyen Âge.
+true
+fin_question
+facile
+VF
+Le Moyen Âge commença en 486 avec la chute de l’Empire romain.
+false
+fin_question
+moyen
+VF
+Pendant le Moyen Âge, les troubadours chantèrent seulement en latin.
+false
+fin_question
+moyen
+VF
+Clément VI est le premier des papes ayant siégé à Avignon de 1309 à 1377.
+false
+fin_question
+moyen
+VF
+Le 17 juillet 1453, la bataille de Castillon met un terme à la guerre de Cent Ans.
+true
+fin_question
+difficile
+VF
+Le Moyen Âge connut huit croisades majeures.
+true
+fin_question
+difficile
+VF
+Signée en 1215 par le roi d’Angleterre Jean sans Terre, la Magna Carta contenait à la base 63 articles.
+true
+fin_question
+difficile
+VF
+Saladin (1138-1193) est connu pour avoir reconquis Jérusalem en 1187.
+true
+fin_question
+facile
+RC
+Quel mot signifiant 'guide' en allemand désigne la personne d'Adolf Hitler ( 1889-1945 ) ? 
+Führer
+fin_question
+facile
+RC
+A quel groupuscule adhère-t-il en 1919 pour en faire le principal parti d'Allemagne ?
+Le parti National Socialiste
+fin_question
+facile
+RC
+Comment s'appelait la milice du parti dirigée par Ernest Röhm ?
+La Section d'Assaut
+fin_question
+moyen
+RC
+omment a-t-on appelé la tentative de coup d'Etat ratée qui a conduit Hitler en prison en 1923 ?
+Le putsch de Munich
+fin_question
+moyen
+RC
+Quel est le titre de l'oeuvre autobiographique rédigée en prison qui énonce les bases de son idéologie ?
+Mon combat
+fin_question
+moyen
+RC
+Quel évènement sert de prétexte à Hitler pour suspendre les libertés civiles et réprimer l'opposition ?
+L'incendie du Reichstag
+fin_question
+difficile
+RC
+Comment s'appelle le ministre de la propagande d'Hitler, expert dans l'art de manipuler les foules ?
+Goebbels
+fin_question
+difficile
+RC
+Quel grand évènement sportif international a servi de propagande au régime nazi en 1936 à Berlin ?
+Les Jeux Olympiques
+fin_question
+difficile
+RC
+Quel est le nom de la police politique nazie dont le chef absolu fut Heinrich Himmler ?
+Gestapo
+fin_question
+difficile
+RC
+Comment a-t-on appelé la grande purge au sein de ses anciens partisans dont la principale victime fut Ernest Röhm ?
+La Nuit des Longs Couteaux
+fin_question

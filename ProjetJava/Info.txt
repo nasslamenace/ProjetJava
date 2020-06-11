@@ -1,0 +1,167 @@
+facile
+QCM
+Quel est le nom du système d'exploitation mis au point par Google ?
+Chrome OS
+Chrome
+Chrobuntu
+Chrome OS
+fin_question
+facile
+QCM
+Sur Facebook, on peut vous ajouter au groupe 'Je suis fan de Claude Guéant' sans votre accord...
+C'est faux, Facebook est connu pour son strict respect de la vie privée
+C'est vrai, mais on peut éviter ça en changeant les réglages de son compte
+C'est vrai, on ne peut que se retirer du groupe a posteriori
+C'est vrai, on ne peut que se retirer du groupe a posteriori
+fin_question
+facile
+QCM
+Si je vois une photo publiée sur Flickr, ai-je le droit de la copier et m'en servir sur mon blog ?
+Non, jamais
+Oui, s'il s'agit d'une utilisation non lucrative à titre pédagogique ou d'information
+Oui, si l'auteur de la photo a placé ses travaux sous licence Creative Commons
+Oui, si l'auteur de la photo a placé ses travaux sous licence Creative Commons
+fin_question
+moyen
+QCM
+Des throbbers, vous en croisez plein sur votre écran toute la journée... Mais de quoi s'agit-il ?
+C'est l'icône qui indique qu'un chargement est en cours sur une page
+C'est l'icône de la page qu'on voit dans les onglets du navigateur
+C'est le vrai nom du curseur de texte, la barre qui clignote quand on tape
+C'est l'icône qui indique qu'un chargement est en cours sur une page
+fin_question
+moyen
+QCM
+Pour dessiner, les pros préfèrent utiliser, à la place d'une souris...
+Une palette graphique
+Une tablette graphique
+Une tabulette graphique
+Une tablette graphique
+fin_question
+moyen
+QCM
+Votre cousin fait des études d'informatique ? Plus tard, il deviendra peut-être...
+Programmeur
+Programmer
+Programmateur
+Programmeur
+fin_question
+difficile
+QCM
+Une seule de ces phrases a un sens...
+J'ai caché la page de l'image vide du navigateur pour taper Ctri+F5
+J'ai caché l'image de la page vide du navigateur en tapant Ctrl+F5
+J'ai vidé le cache du navigateur en tapant Ctrl+F5 pour afficher l'image
+J'ai vidé le cache du navigateur en tapant Ctrl+F5 pour afficher l'image
+fin_question
+difficile
+QCM
+Mon écran affiche 1280 pixels en largeur et 1024 pixels en hauteur, ça s'appelle
+Sa définition
+Sa résolution
+Sa révolution
+Sa définition
+fin_question
+difficile
+QCM
+Pas assez d'argent pour acheter Microsoft Office, qui comprend les logiciels Word ou Excel ? Installez à la place :
+LibreOffice
+StarOffice
+PackOffice
+LibreOffice
+fin_question
+facile
+VF
+PC signifie: Personal Computer.
+true
+fin_question
+facile
+VF
+Le CPU est le synonyme de carte graphique.
+false
+fin_question
+facile
+VF
+Un pourriel est l'appellation française d'un spam.
+true
+fin_question
+moyen
+VF
+Le câble reliant généralement l'écran à l'UC est appelé: câble VGA.
+true
+fin_question
+moyen
+VF
+La CG est une mémoire de masse magnétique.
+false
+fin_question
+moyen
+VF
+1Ko est égal à 2024 octects.
+false
+fin_question
+difficile
+VF
+La mémoire morte est non nécessaire dans un pc.
+false
+fin_question
+difficile
+VF
+Un clavier 'AZERTY' est un clavier alphanumérique.
+true
+fin_question
+difficile
+VF
+Dans un 'fichier PDF' le 'PDF' signifie: Portable document format.
+true
+fin_question
+difficile
+VF
+Un bit est égal à 16 couleurs.
+false
+fin_question
+facile
+RC
+Un bombardement c'est :
+Un malware très puisssant.
+fin_question
+facile
+RC
+Un domaine c'est :
+Un ensemble d'adresses faisant l'objet d'une gestion commune.
+fin_question
+facile
+RC
+Le filoutage c'est :
+Une méthode associant un courriel et l'imitation d'un site réel à des fins crapuleuses.
+fin_question
+moyen
+RC
+Une adresse IP est le numéro qui identifie chaque ordinateur connecté à Internet mais ça signifie :
+Internet Protocol
+fin_question
+moyen
+RC
+HTTP est un est un protocole de communication client-serveur développé pour le World Wide Web mais ça signifie :
+HyperText Transfer Protocol
+fin_question
+moyen
+RC
+Le format « RSS » permet ainsi de décrire de façon synthétique le contenu d'un site web, mais cela signifie :
+Really Simple Syndication
+fin_question
+difficile
+RC
+Un octet c'est :
+Un ensemble ordonné de huit éléments binaires traités comme un tout.
+fin_question
+difficile
+RC
+Un blog ou blogue est un site web constitué par la réunion de billets écrits dans l'ordre chronologique, et classés la plupart du temps par ordre antéchronologique, mais cela vient de :
+Web log
+fin_question
+difficile
+RC
+Le spam désigne une communication électronique, non sollicitée par les destinataires, expédiée en masse à des fins publicitaires ou malhonnêtes, mais en fait l'origine de ce mot vient de :
+Des comiques des Monty Python
+fin_question
