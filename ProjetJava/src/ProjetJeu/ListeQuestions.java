@@ -138,6 +138,33 @@ public class ListeQuestions {
 		
 	}
 		
+	public ArrayList<Question> selectionnerQuestions(Niveau n) {
+		
+		
+		/*
+		//Stream<Question> questionStream = this.questions.stream();
+		System.out.println(this.questions.size());
+		try {
+		
+			return this.questions.get(0);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return new Question(Niveau.facile, Theme.themes.get(Theme.selectionerThemePhase1()), new RC("2 + 2", "4"));
+		}
+		
+		*/
+		
+		
+		Stream<Question> questionStream = this.questions.stream();
+		
+		
+		return (ArrayList<Question>) questionStream.filter(x -> x.getNiveau() == n)
+				.collect(Collectors.toList());
+
+
+		
+	}
 		
 
 		

@@ -18,6 +18,9 @@ public abstract class TypeQuestion implements Serializable{
 	
 	public abstract boolean isRight();
 	
+	public abstract String getReponse();
+	public abstract void setReponse(String reponse);
+	
 	public String getQuestion() {
 		return question;
 	}

@@ -326,6 +326,9 @@ public class Main extends JFrame{
 				"Choix du theme", JOptionPane.QUESTION_MESSAGE, null, liste, liste[9]);
       
       wholeContainer.add(cancelContainer, BorderLayout.NORTH);
+      
+      mainContainer.add(new ListeQuestionPan(chosenTheme), "ListeQuestion");
+      mainLayout.show(mainContainer, "ListeQuestion");
       revalidate();
       repaint();
       

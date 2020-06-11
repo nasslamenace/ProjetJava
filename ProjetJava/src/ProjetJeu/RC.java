@@ -71,4 +71,16 @@ public class RC extends TypeQuestion {
 		return temp.equals(this.bonneReponse);
 	}
 
+	@Override
+	public String getReponse() {
+
+		return bonneReponse;
+	}
+
+	@Override
+	public void setReponse(String reponse) {
+		this.bonneReponse = reponse; 
+		
+	}
+
 }

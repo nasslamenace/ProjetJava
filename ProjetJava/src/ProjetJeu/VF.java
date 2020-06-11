@@ -4,6 +4,7 @@ import java.awt.FlowLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
@@ -99,5 +100,29 @@ public class VF extends TypeQuestion{
 		
 		return false;
 	}
+
+
+	@Override
+	public String getReponse() {
+		return isTrue ? "Vrai" : "Faux";
+	}
+
+
+	@Override
+	public void setReponse(String reponse) {
+		
+		try {
+			
+		}catch(NumberFormatException exception) {
+			
+			JOptionPane.showMessageDialog(null, "Veuillez entrer \"vrai\" ou \"faux\" pour les questions de type vrai/faux ", "error",
+					JOptionPane.ERROR_MESSAGE);
+			
+		}
+		
+	}
+
+
+
 
 }
